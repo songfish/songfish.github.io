@@ -109,39 +109,40 @@
 
 
   <meta name="description" content="学习使用TensorFlow来识别交通标志本文参考https://juejin.im/entry/5a1637f2f265da432528f6ef  的文章和  https://github.com/waleedka/traffic-signs-tensorflow  的源代码。     给定交通标志的图像，我们的模型应该能够知道它的类型。 首先我们要导入需要的库。 1234567import t">
+<meta name="keywords" content="tensorflow">
 <meta property="og:type" content="article">
-<meta property="og:title" content="求索">
-<meta property="og:url" content="http://yoursite.com/2018/09/13/finalversion/finalversion/index.html">
+<meta property="og:title" content="学习使用TensorFlow来识别交通标志">
+<meta property="og:url" content="http://yoursite.com/2018/09/13/学习使用TensorFlow来识别交通标志/index.html">
 <meta property="og:site_name" content="求索">
 <meta property="og:description" content="学习使用TensorFlow来识别交通标志本文参考https://juejin.im/entry/5a1637f2f265da432528f6ef  的文章和  https://github.com/waleedka/traffic-signs-tensorflow  的源代码。     给定交通标志的图像，我们的模型应该能够知道它的类型。 首先我们要导入需要的库。 1234567import t">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/2018/09/13/finalversion/finalversion/output_12_0.png">
-<meta property="og:image" content="http://yoursite.com/2018/09/13/finalversion/finalversion/output_17_0.png">
-<meta property="og:image" content="http://yoursite.com/2018/09/13/finalversion/finalversion/output_17_2.png">
-<meta property="og:image" content="http://yoursite.com/2018/09/13/finalversion/finalversion/output_17_4.png">
-<meta property="og:image" content="http://yoursite.com/2018/09/13/finalversion/finalversion/output_17_6.png">
-<meta property="og:image" content="http://yoursite.com/2018/09/13/finalversion/finalversion/output_22_0.png">
-<meta property="og:image" content="http://yoursite.com/2018/09/13/finalversion/finalversion/output_22_2.png">
-<meta property="og:image" content="http://yoursite.com/2018/09/13/finalversion/finalversion/output_22_4.png">
-<meta property="og:image" content="http://yoursite.com/2018/09/13/finalversion/finalversion/output_22_6.png">
-<meta property="og:image" content="http://yoursite.com/2018/09/13/finalversion/finalversion/output_26_0.png">
-<meta property="og:image" content="http://yoursite.com/2018/09/13/finalversion/finalversion/output_26_1.png">
-<meta property="og:image" content="http://yoursite.com/2018/09/13/finalversion/finalversion/output_30_0.png">
-<meta property="og:image" content="http://yoursite.com/2018/09/13/finalversion/finalversion/output_39_0.png">
-<meta property="og:image" content="http://yoursite.com/2018/09/13/finalversion/finalversion/output_42_2.png">
-<meta property="og:image" content="http://yoursite.com/2018/09/13/finalversion/finalversion/output_42_3.png">
-<meta property="og:updated_time" content="2018-09-13T02:44:30.000Z">
+<meta property="og:image" content="http://yoursite.com/2018/09/13/学习使用TensorFlow来识别交通标志/output_12_0.png">
+<meta property="og:image" content="http://yoursite.com/2018/09/13/学习使用TensorFlow来识别交通标志/output_17_0.png">
+<meta property="og:image" content="http://yoursite.com/2018/09/13/学习使用TensorFlow来识别交通标志/output_17_2.png">
+<meta property="og:image" content="http://yoursite.com/2018/09/13/学习使用TensorFlow来识别交通标志/output_17_4.png">
+<meta property="og:image" content="http://yoursite.com/2018/09/13/学习使用TensorFlow来识别交通标志/output_17_6.png">
+<meta property="og:image" content="http://yoursite.com/2018/09/13/学习使用TensorFlow来识别交通标志/output_22_0.png">
+<meta property="og:image" content="http://yoursite.com/2018/09/13/学习使用TensorFlow来识别交通标志/output_22_2.png">
+<meta property="og:image" content="http://yoursite.com/2018/09/13/学习使用TensorFlow来识别交通标志/output_22_4.png">
+<meta property="og:image" content="http://yoursite.com/2018/09/13/学习使用TensorFlow来识别交通标志/output_22_6.png">
+<meta property="og:image" content="http://yoursite.com/2018/09/13/学习使用TensorFlow来识别交通标志/output_26_0.png">
+<meta property="og:image" content="http://yoursite.com/2018/09/13/学习使用TensorFlow来识别交通标志/output_26_1.png">
+<meta property="og:image" content="http://yoursite.com/2018/09/13/学习使用TensorFlow来识别交通标志/output_30_0.png">
+<meta property="og:image" content="http://yoursite.com/2018/09/13/学习使用TensorFlow来识别交通标志/output_39_0.png">
+<meta property="og:image" content="http://yoursite.com/2018/09/13/学习使用TensorFlow来识别交通标志/output_42_2.png">
+<meta property="og:image" content="http://yoursite.com/2018/09/13/学习使用TensorFlow来识别交通标志/output_42_3.png">
+<meta property="og:updated_time" content="2018-09-13T02:52:59.148Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="求索">
+<meta name="twitter:title" content="学习使用TensorFlow来识别交通标志">
 <meta name="twitter:description" content="学习使用TensorFlow来识别交通标志本文参考https://juejin.im/entry/5a1637f2f265da432528f6ef  的文章和  https://github.com/waleedka/traffic-signs-tensorflow  的源代码。     给定交通标志的图像，我们的模型应该能够知道它的类型。 首先我们要导入需要的库。 1234567import t">
-<meta name="twitter:image" content="http://yoursite.com/2018/09/13/finalversion/finalversion/output_12_0.png">
+<meta name="twitter:image" content="http://yoursite.com/2018/09/13/学习使用TensorFlow来识别交通标志/output_12_0.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/09/13/finalversion/finalversion/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/13/学习使用TensorFlow来识别交通标志/"/>
 
 
 
@@ -151,7 +152,7 @@
   };
 </script>
 
-  <title> | 求索</title>
+  <title>学习使用TensorFlow来识别交通标志 | 求索</title>
   
 
 
@@ -351,7 +352,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/13/finalversion/finalversion/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/13/学习使用TensorFlow来识别交通标志/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Song Yu">
@@ -368,7 +369,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">学习使用TensorFlow来识别交通标志
               
             
           </h1>
@@ -393,7 +394,7 @@
                 
               
 
-              <time title="创建时间：2018-09-13 10:44:54 / 修改时间：10:44:30" itemprop="dateCreated datePublished" datetime="2018-09-13T10:44:54+08:00">2018-09-13</time>
+              <time title="创建时间：2018-09-13 10:50:14 / 修改时间：10:52:59" itemprop="dateCreated datePublished" datetime="2018-09-13T10:50:14+08:00">2018-09-13</time>
             
 
             
@@ -404,6 +405,24 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/tensorflow/" itemprop="url" rel="index"><span itemprop="name">tensorflow</span></a></span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -412,8 +431,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/09/13/finalversion/finalversion/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/09/13/finalversion/finalversion/" itemprop="commentCount"></span>
+                <a href="/2018/09/13/学习使用TensorFlow来识别交通标志/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/09/13/学习使用TensorFlow来识别交通标志/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -421,7 +440,7 @@
 
           
           
-             <span id="/2018/09/13/finalversion/finalversion/" class="leancloud_visitors" data-flag-title="">
+             <span id="/2018/09/13/学习使用TensorFlow来识别交通标志/" class="leancloud_visitors" data-flag-title="学习使用TensorFlow来识别交通标志">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -585,6 +604,12 @@ Accuracy: 0.5131
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/tensorflow/" rel="tag"># tensorflow</a>
+          
+        </div>
+      
 
       
       
@@ -594,8 +619,8 @@ Accuracy: 0.5131
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/05/Next主题优化/" rel="next" title="Next主题的简单优化(一)">
-                <i class="fa fa-chevron-left"></i> Next主题的简单优化(一)
+              <a href="/2018/09/13/finalversion/finalversion/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
               </a>
             
           </div>
@@ -603,10 +628,6 @@ Accuracy: 0.5131
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/13/学习使用TensorFlow来识别交通标志/" rel="prev" title="学习使用TensorFlow来识别交通标志">
-                学习使用TensorFlow来识别交通标志 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
