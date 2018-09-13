@@ -131,7 +131,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/09/13/学习使用TensorFlow来识别交通标志/output_39_0.png">
 <meta property="og:image" content="http://yoursite.com/2018/09/13/学习使用TensorFlow来识别交通标志/output_42_2.png">
 <meta property="og:image" content="http://yoursite.com/2018/09/13/学习使用TensorFlow来识别交通标志/output_42_3.png">
-<meta property="og:updated_time" content="2018-09-13T02:52:59.148Z">
+<meta property="og:updated_time" content="2018-09-13T02:54:20.217Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习使用TensorFlow来识别交通标志">
 <meta name="twitter:description" content="学习使用TensorFlow来识别交通标志本文参考https://juejin.im/entry/5a1637f2f265da432528f6ef  的文章和  https://github.com/waleedka/traffic-signs-tensorflow  的源代码。     给定交通标志的图像，我们的模型应该能够知道它的类型。 首先我们要导入需要的库。 1234567import t">
@@ -394,7 +394,7 @@
                 
               
 
-              <time title="创建时间：2018-09-13 10:50:14 / 修改时间：10:52:59" itemprop="dateCreated datePublished" datetime="2018-09-13T10:50:14+08:00">2018-09-13</time>
+              <time title="创建时间：2018-09-13 10:50:14 / 修改时间：10:54:20" itemprop="dateCreated datePublished" datetime="2018-09-13T10:50:14+08:00">2018-09-13</time>
             
 
             
@@ -476,7 +476,8 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> skimage <span class="keyword">import</span> data</span><br><span class="line"><span class="keyword">from</span> skimage <span class="keyword">import</span> transform</span><br><span class="line"><span class="keyword">import</span> random</span><br></pre></td></tr></table></figure>
 <pre><code>/home/song/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
   from ._conv import register_converters as _register_converters
-</code></pre><h2 id="1-加载数据和分析数据"><a href="#1-加载数据和分析数据" class="headerlink" title="1  加载数据和分析数据"></a>1  加载数据和分析数据</h2><h3 id="1-1-加载数据"><a href="#1-1-加载数据" class="headerlink" title="1.1 加载数据"></a>1.1 加载数据</h3><p>我们使用的是Belgian Traffic Sign Dataset。网址为<a href="http://btsd.ethz.ch/shareddata/" target="_blank" rel="noopener">http://btsd.ethz.ch/shareddata/</a><br>在这个网站可以下载到我们需要的数据集。你只需要下载BelgiumTS for Classification (cropped images):后面的两个数据集：  </p>
+</code></pre>   <a id="more"></a>
+<h2 id="1-加载数据和分析数据"><a href="#1-加载数据和分析数据" class="headerlink" title="1  加载数据和分析数据"></a>1  加载数据和分析数据</h2><h3 id="1-1-加载数据"><a href="#1-1-加载数据" class="headerlink" title="1.1 加载数据"></a>1.1 加载数据</h3><p>我们使用的是Belgian Traffic Sign Dataset。网址为<a href="http://btsd.ethz.ch/shareddata/" target="_blank" rel="noopener">http://btsd.ethz.ch/shareddata/</a><br>在这个网站可以下载到我们需要的数据集。你只需要下载BelgiumTS for Classification (cropped images):后面的两个数据集：  </p>
 <pre><code>BelgiumTSC_Training (171.3MBytes)  
 BelgiumTSC_Testing (76.5MBytes)  
 </code></pre><p>  我把这两个数据集分别放在了以下的路径：    </p>
