@@ -378,7 +378,7 @@
                 
               
 
-              <time title="创建时间：2018-09-13 10:50:14 / 修改时间：11:11:44" itemprop="dateCreated datePublished" datetime="2018-09-13T10:50:14+08:00">2018-09-13</time>
+              <time title="创建时间：2018-09-13 10:50:14 / 修改时间：11:13:34" itemprop="dateCreated datePublished" datetime="2018-09-13T10:50:14+08:00">2018-09-13</time>
             
 
             
@@ -456,7 +456,7 @@
 
       
         
-          <h1 id="学习使用TensorFlow来识别交通标志"><a href="#学习使用TensorFlow来识别交通标志" class="headerlink" title="学习使用TensorFlow来识别交通标志"></a>学习使用TensorFlow来识别交通标志</h1><p>本文参考<a href="https://juejin.im/entry/5a1637f2f265da432528f6ef" target="_blank" rel="noopener">https://juejin.im/entry/5a1637f2f265da432528f6ef</a>  的文章和  <a href="https://github.com/waleedka/traffic-signs-tensorflow" target="_blank" rel="noopener">https://github.com/waleedka/traffic-signs-tensorflow</a>  的源代码。   </p>
+          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本文参考<a href="https://juejin.im/entry/5a1637f2f265da432528f6ef" target="_blank" rel="noopener">https://juejin.im/entry/5a1637f2f265da432528f6ef</a>  的文章和  <a href="https://github.com/waleedka/traffic-signs-tensorflow" target="_blank" rel="noopener">https://github.com/waleedka/traffic-signs-tensorflow</a>  的源代码。   </p>
 <p> 给定交通标志的图像，我们的模型应该能够知道它的类型。<br> 首先我们要导入需要的库。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> skimage <span class="keyword">import</span> data</span><br><span class="line"><span class="keyword">from</span> skimage <span class="keyword">import</span> transform</span><br><span class="line"><span class="keyword">import</span> random</span><br></pre></td></tr></table></figure>
 <pre><code>/home/song/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
