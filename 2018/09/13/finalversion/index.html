@@ -108,12 +108,12 @@
 
 
 
-  <meta name="description" content="学习使用TensorFlow来识别交通标志本文参考https://juejin.im/entry/5a1637f2f265da432528f6ef  的文章和  https://github.com/waleedka/traffic-signs-tensorflow  的源代码。     给定交通标志的图像，我们的模型应该能够知道它的类型。 首先我们要导入需要的库。 1234567import t">
+  <meta name="description" content="title: 学习使用Tensorflow来识别交通标志date:tags:   tensorflowcategories: tensorflowcomments: true  学习使用TensorFlow来识别交通标志本文参考https://juejin.im/entry/5a1637f2f265da432528f6ef  的文章和  https://github.com/waleedka/t">
 <meta property="og:type" content="article">
 <meta property="og:title" content="求索">
 <meta property="og:url" content="http://yoursite.com/2018/09/13/finalversion/index.html">
 <meta property="og:site_name" content="求索">
-<meta property="og:description" content="学习使用TensorFlow来识别交通标志本文参考https://juejin.im/entry/5a1637f2f265da432528f6ef  的文章和  https://github.com/waleedka/traffic-signs-tensorflow  的源代码。     给定交通标志的图像，我们的模型应该能够知道它的类型。 首先我们要导入需要的库。 1234567import t">
+<meta property="og:description" content="title: 学习使用Tensorflow来识别交通标志date:tags:   tensorflowcategories: tensorflowcomments: true  学习使用TensorFlow来识别交通标志本文参考https://juejin.im/entry/5a1637f2f265da432528f6ef  的文章和  https://github.com/waleedka/t">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/2018/09/13/finalversion/output_12_0.png">
 <meta property="og:image" content="http://yoursite.com/2018/09/13/finalversion/output_17_0.png">
@@ -130,10 +130,10 @@
 <meta property="og:image" content="http://yoursite.com/2018/09/13/finalversion/output_39_0.png">
 <meta property="og:image" content="http://yoursite.com/2018/09/13/finalversion/output_42_2.png">
 <meta property="og:image" content="http://yoursite.com/2018/09/13/finalversion/output_42_3.png">
-<meta property="og:updated_time" content="2018-09-13T02:44:30.000Z">
+<meta property="og:updated_time" content="2018-09-13T02:47:48.296Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="求索">
-<meta name="twitter:description" content="学习使用TensorFlow来识别交通标志本文参考https://juejin.im/entry/5a1637f2f265da432528f6ef  的文章和  https://github.com/waleedka/traffic-signs-tensorflow  的源代码。     给定交通标志的图像，我们的模型应该能够知道它的类型。 首先我们要导入需要的库。 1234567import t">
+<meta name="twitter:description" content="title: 学习使用Tensorflow来识别交通标志date:tags:   tensorflowcategories: tensorflowcomments: true  学习使用TensorFlow来识别交通标志本文参考https://juejin.im/entry/5a1637f2f265da432528f6ef  的文章和  https://github.com/waleedka/t">
 <meta name="twitter:image" content="http://yoursite.com/2018/09/13/finalversion/output_12_0.png">
 
 
@@ -393,13 +393,9 @@
                 
               
 
-              <time title="创建时间：2018-09-13 10:45:24 / 修改时间：10:44:30" itemprop="dateCreated datePublished" datetime="2018-09-13T10:45:24+08:00">2018-09-13</time>
+              <time title="创建时间：2018-09-13 10:47:48" itemprop="dateCreated datePublished" datetime="2018-09-13T10:47:48+08:00">2018-09-13</time>
             
 
-            
-              
-
-              
             
           </span>
 
@@ -452,9 +448,16 @@
       
 
       
-        <h1 id="学习使用TensorFlow来识别交通标志"><a href="#学习使用TensorFlow来识别交通标志" class="headerlink" title="学习使用TensorFlow来识别交通标志"></a>学习使用TensorFlow来识别交通标志</h1><p>本文参考<a href="https://juejin.im/entry/5a1637f2f265da432528f6ef" target="_blank" rel="noopener">https://juejin.im/entry/5a1637f2f265da432528f6ef</a>  的文章和  <a href="https://github.com/waleedka/traffic-signs-tensorflow" target="_blank" rel="noopener">https://github.com/waleedka/traffic-signs-tensorflow</a>  的源代码。   </p>
+        <hr>
+<p>title: 学习使用Tensorflow来识别交通标志<br>date:<br>tags: </p>
+<ul>
+<li>tensorflow<br>categories:</li>
+<li>tensorflow<br>comments: true</li>
+</ul>
+<h1 id="学习使用TensorFlow来识别交通标志"><a href="#学习使用TensorFlow来识别交通标志" class="headerlink" title="学习使用TensorFlow来识别交通标志"></a>学习使用TensorFlow来识别交通标志</h1><p>本文参考<a href="https://juejin.im/entry/5a1637f2f265da432528f6ef" target="_blank" rel="noopener">https://juejin.im/entry/5a1637f2f265da432528f6ef</a>  的文章和  <a href="https://github.com/waleedka/traffic-signs-tensorflow" target="_blank" rel="noopener">https://github.com/waleedka/traffic-signs-tensorflow</a>  的源代码。   </p>
 <p> 给定交通标志的图像，我们的模型应该能够知道它的类型。<br> 首先我们要导入需要的库。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> skimage <span class="keyword">import</span> data</span><br><span class="line"><span class="keyword">from</span> skimage <span class="keyword">import</span> transform</span><br><span class="line"><span class="keyword">import</span> random</span><br></pre></td></tr></table></figure>
+   <a id="more"></a>
 <pre><code>/home/song/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
   from ._conv import register_converters as _register_converters
 </code></pre><h2 id="1-加载数据和分析数据"><a href="#1-加载数据和分析数据" class="headerlink" title="1  加载数据和分析数据"></a>1  加载数据和分析数据</h2><h3 id="1-1-加载数据"><a href="#1-1-加载数据" class="headerlink" title="1.1 加载数据"></a>1.1 加载数据</h3><p>我们使用的是Belgian Traffic Sign Dataset。网址为<a href="http://btsd.ethz.ch/shareddata/" target="_blank" rel="noopener">http://btsd.ethz.ch/shareddata/</a><br>在这个网站可以下载到我们需要的数据集。你只需要下载BelgiumTS for Classification (cropped images):后面的两个数据集：  </p>
