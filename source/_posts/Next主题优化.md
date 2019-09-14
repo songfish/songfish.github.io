@@ -1,6 +1,6 @@
 ---
 title: Next主题的简单优化(一)
-date: 2018-08-05 17:13:51
+date: 2019-09-14 14:19:06
 tags: hexo
 comments: true
 categories: 一些摸索
@@ -24,11 +24,11 @@ Next主题版本：Muse v6.3.0
 
 **1.获取APP ID和APP Key**。首先在[LeanCloud](https://leancloud.cn/dashboard/login.html#/signup)注册自己的账号。进入[控制台](https://leancloud.cn/dashboard/applist.html#/apps)创建应用。应用创建好以后，进入刚创建的应用，选择`设置`>`应用Key`，就能看到`APP ID`和`APP Key`了：
 
-![img](https://ws1.sinaimg.cn/large/006qRazegy1fkwo6w2b6uj30xe0etjt4.jpg)
+![](/Users/songyu/songfish.github.io/source/_posts/Next主题优化/index.png)
 
 **2.设置安全域名 :**
 
-![è®¾ç½®å®å¨åå](https://ws1.sinaimg.cn/large/006qRazegy1fkxqmddfh1j30qd0go40h.jpg)
+![](/Users/songyu/songfish.github.io/source/_posts/Next主题优化/006qRazegy1fkxqmddfh1j30qd0go40h.png)
 
 **3.修改`主题配置文件`中的Valine部分 :**
 
@@ -60,7 +60,7 @@ valine:
 
 1.仍然使用LeanCloud。按下图创建`Class`，`Class`名称必须为`Counter`。
 
-![Selection_003](http://boketuchuang.oss-cn-beijing.aliyuncs.com/18-8-7/35529984.jpg)
+![](/Users/songyu/songfish.github.io/source/_posts/Next主题优化/35529984.png)
 
 2.修改`主题配置文件`中的`leancloud_visitors`配置项：
 
@@ -96,9 +96,7 @@ busuanzi_count:
 
 1.到这个神奇的网站[EasyIcon](http://www.easyicon.net/)找心仪的图标，下载`32PX`和`16PX`的`ICO`格式，并把它们放在`/themes/next/source/images`里。
 
-
-
-![](http://boketuchuang.oss-cn-beijing.aliyuncs.com/18-8-7/95085113.jpg)
+![](/Users/songyu/songfish.github.io/source/_posts/Next主题优化/95085113.png)
 
 2.修改`主题配置文件`中的`favicon`配置项，其中`small`对应`16px`的图标路径，`medium`对应`32px`的图标路径。
 
@@ -184,13 +182,13 @@ local_search:
 
 安装插件
 
-~~~shell
+```shell
 $ npm install hexo-generator-search --save
-~~~
+```
 
 但是我在安装插件的时候一直报错
 
-~~~shell
+```shell
 npm ERR! path /home/song/hexo/test/node_modules/babylon
 npm ERR! code ENOENT
 npm ERR! errno -2
@@ -201,14 +199,14 @@ npm ERR! enoent
 
 npm ERR! A complete log of this run can be found in:
 npm ERR!     /home/song/.npm/_logs/2018-11-11T06_59_34_564Z-debug.log
-~~~
+```
 
 [解决办法](https://blog.csdn.net/h416756139/article/details/50812109)：
 
-~~~shell
+```shell
 $ npm install -g cnpm --registry=http://registry.npm.taobao.org
 $ cnpm install hexo-generator-search --save
-~~~
+```
 
 
 
