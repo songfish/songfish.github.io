@@ -24,11 +24,11 @@ Next主题版本：Muse v6.3.0
 
 **1.获取APP ID和APP Key**。首先在[LeanCloud](https://leancloud.cn/dashboard/login.html#/signup)注册自己的账号。进入[控制台](https://leancloud.cn/dashboard/applist.html#/apps)创建应用。应用创建好以后，进入刚创建的应用，选择`设置`>`应用Key`，就能看到`APP ID`和`APP Key`了：
 
-![](/Users/songyu/songfish.github.io/source/_posts/Next主题优化/index.png)
+![](https://ae01.alicdn.com/kf/H7baa1fe5543c4aa6858745d9df7e91fbS.png)
 
 **2.设置安全域名 :**
 
-![](/Users/songyu/songfish.github.io/source/_posts/Next主题优化/006qRazegy1fkxqmddfh1j30qd0go40h.png)
+![](https://ae01.alicdn.com/kf/Hc054263aa15c469dbce354c41b9ca25eW.png)
 
 **3.修改`主题配置文件`中的Valine部分 :**
 
@@ -60,7 +60,7 @@ valine:
 
 1.仍然使用LeanCloud。按下图创建`Class`，`Class`名称必须为`Counter`。
 
-![](/Users/songyu/songfish.github.io/source/_posts/Next主题优化/35529984.png)
+![](https://ae01.alicdn.com/kf/He8aeab19cab94cab9548419204036df1Z.png)
 
 2.修改`主题配置文件`中的`leancloud_visitors`配置项：
 
@@ -96,7 +96,7 @@ busuanzi_count:
 
 1.到这个神奇的网站[EasyIcon](http://www.easyicon.net/)找心仪的图标，下载`32PX`和`16PX`的`ICO`格式，并把它们放在`/themes/next/source/images`里。
 
-![](/Users/songyu/songfish.github.io/source/_posts/Next主题优化/95085113.png)
+![](https://ae01.alicdn.com/kf/H3b2c1ae464404d6382c9d8cee52d9ce1P.png)
 
 2.修改`主题配置文件`中的`favicon`配置项，其中`small`对应`16px`的图标路径，`medium`对应`32px`的图标路径。
 
