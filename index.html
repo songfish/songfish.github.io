@@ -520,6 +520,214 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/11/异常行为检测文献整理-顶会顶刊/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Song Yu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/header.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="求索">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/05/11/异常行为检测文献整理-顶会顶刊/" itemprop="url">
+                  异常行为检测文献整理(顶会顶刊)
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-05-11 13:25:57" itemprop="dateCreated datePublished" datetime="2019-05-11T13:25:57+08:00">2019-05-11</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-09-14 14:51:50" itemprop="dateModified" datetime="2019-09-14T14:51:50+08:00">2019-09-14</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/paper/" itemprop="url" rel="index"><span itemprop="name">paper</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/05/11/异常行为检测文献整理-顶会顶刊/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2019/05/11/异常行为检测文献整理-顶会顶刊/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/05/11/异常行为检测文献整理-顶会顶刊/" class="leancloud_visitors" data-flag-title="异常行为检测文献整理(顶会顶刊)">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Views: </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="2019"><a href="#2019" class="headerlink" title="2019"></a>2019</h2><h3 id="Memorizing-Normality-to-Detect-Anomaly-Memory-augmented-Deep-Autoencoder-for-Unsupervised-Anomaly-Detection"><a href="#Memorizing-Normality-to-Detect-Anomaly-Memory-augmented-Deep-Autoencoder-for-Unsupervised-Anomaly-Detection" class="headerlink" title="Memorizing Normality to Detect Anomaly: Memory-augmented Deep Autoencoder for Unsupervised Anomaly Detection"></a>Memorizing Normality to Detect Anomaly: Memory-augmented Deep Autoencoder for Unsupervised Anomaly Detection</h3><p><strong>创新点：</strong>提出用一个memory module来augment 自编码器，叫做MemAE。MemAE首先从encoder获得编码，然后在训练阶段，记忆内容是更新的，测试时，学习到的记忆固定，从正常数据中选择一些记录的记忆得到重建。</p>
+<p><strong>针对问题：</strong>深度自编码器可能会很好地重建异常行为。比如，一些异常和正常的训练数据有相同的compositional patterns 或者decoder解码一些异常编码的时候太厉害了。</p>
+<p><strong>关键词：</strong> attention based memory addressing</p>
+<p><img src="https://ae01.alicdn.com/kf/H9238e8c430f543479d198412b9d711dbJ.jpg" alt=""></p>
+<h3 id="Graph-Convolutional-Label-Noise-Cleaner-Train-a-Plug-and-play-Action-Classifier-for-Anomaly-Detection"><a href="#Graph-Convolutional-Label-Noise-Cleaner-Train-a-Plug-and-play-Action-Classifier-for-Anomaly-Detection" class="headerlink" title="Graph Convolutional Label Noise Cleaner: Train a Plug-and-play Action Classifier for Anomaly Detection"></a>Graph Convolutional Label Noise Cleaner: Train a Plug-and-play Action Classifier for Anomaly Detection</h3><p><strong>创新点：[首次用GCN来纠正视频分析领域的label noise]</strong> a supervised learning task under noisy labels。只要清除label noise，就可以直接将完全监督的动作分类器(fully supervised action classifiers)应用于弱监督的异常检测，并最大限度地利用这些完善的分类器。为此，设计了一个图卷积网络(graph convolutional network)来校正noisy labels。基于特征相似性和时间一致性(视频的两个特性)，网络将supervisory信号从高置信度的片段传播到低置信度的片段。通过这种方式，网络能够为动作分类器提供cleaned supervision。在测试阶段，我们只需要从动作分类器中获取片段预测，无需做任何后处理。</p>
+<p><strong>针对问题：</strong>近年来，对新兴的二元分类范式进行了一些研究，训练数据包括异常和普通视频。只有视频级别的异常标签提供。之前的工作都把弱监督异常检测问题看做是多示例学习(multiple-instance learning)。我们换了角度，看作是noise labels下的监督学习任务。噪声标签指的是异常视频中正常片段的错误注释，因为标记“异常”的视频可能包含相当多的正常片段。因此，一旦清除了噪声标签，就可以直接训练完全监督的动作分类器。</p>
+<p><strong>方法：</strong>两个阶段，清洁和分类。清洁阶段中，训练一个cleaner来校正classifier得到的预测噪声，并且提供了更少噪声的refined labels。在分类阶段，action classifier使用cleaned labels重新训练并且产生更可靠的预测。cleaner的主要想法是通过高可信度预测的噪声来消除低可信度预测的噪声。设计了一个GCN来建立高可信度片段和低可信度片段之间的关系。在图中，片段被抽象成顶点 (vertexes) ，异常信息通过边 (edges) 传播。测试的时候，我们不需要cleaner，而是直接获得训练snippet-wise的异常结果。</p>
+<p>对两种类型的主流动作分类器进行了大量实验：C3D和TSN。</p>
+<p>（我们的label noise cleaner 的目标是在高可信度注释的监督下，在图（整个视频）中对节点（视频片段）进行分类。）</p>
+<p>Y=0(只包含正常片段的negative bag)是noiseless。而Y=1是noisy，因为部分是异常的。这就叫做one-sided label noise。</p>
+<p><strong>数据集：</strong>UCF-Crime Shanghai Tech UCSD-Peds</p>
+<p><img src="https://ae01.alicdn.com/kf/HTB1GzbSdA5E3KVjSZFCq6zuzXXaQ.jpg" alt="图片"></p>
+<p><strong>灵感来源：</strong>[Sivan Sabato and Naftali Tishby. Multi-instance learning with any hypothesis class. Journal of Machine Learning Research, 13(1):2999–3039, Oct. 2012.] MIL任务可以被视为在one-sided label noise下学习。</p>
+<p>​         <img src="https://ae01.alicdn.com/kf/He2d73e0096074fd2b4f8063626527f33e.jpg" alt="img">       </p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/05/11/异常行为检测文献整理-顶会顶刊/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/11/异常行为检测文献新论文跟进/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -660,210 +868,6 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/11/11/异常行为检测文献新论文跟进/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/11/异常行为检测文献整理-顶会顶刊/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Song Yu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/header.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="求索">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/11/异常行为检测文献整理-顶会顶刊/" itemprop="url">
-                  异常行为检测文献整理(顶会顶刊)
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-11-11 13:25:57" itemprop="dateCreated datePublished" datetime="2018-11-11T13:25:57+08:00">2018-11-11</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-06-21 19:33:45" itemprop="dateModified" datetime="2019-06-21T19:33:45+08:00">2019-06-21</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/paper/" itemprop="url" rel="index"><span itemprop="name">paper</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/11/11/异常行为检测文献整理-顶会顶刊/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2018/11/11/异常行为检测文献整理-顶会顶刊/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2018/11/11/异常行为检测文献整理-顶会顶刊/" class="leancloud_visitors" data-flag-title="异常行为检测文献整理(顶会顶刊)">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Views: </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="2019"><a href="#2019" class="headerlink" title="2019"></a>2019</h2><h3 id="Graph-Convolutional-Label-Noise-Cleaner-Train-a-Plug-and-play-Action-Classifier-for-Anomaly-Detection"><a href="#Graph-Convolutional-Label-Noise-Cleaner-Train-a-Plug-and-play-Action-Classifier-for-Anomaly-Detection" class="headerlink" title="Graph Convolutional Label Noise Cleaner: Train a Plug-and-play Action Classifier for Anomaly Detection"></a>Graph Convolutional Label Noise Cleaner: Train a Plug-and-play Action Classifier for Anomaly Detection</h3><p><strong>创新点：[首次用GCN来纠正视频分析领域的label noise]</strong> a supervised learning task under noisy labels。只要清除label noise，就可以直接将完全监督的动作分类器(fully supervised action classifiers)应用于弱监督的异常检测，并最大限度地利用这些完善的分类器。为此，设计了一个图卷积网络(graph convolutional network)来校正noisy labels。基于特征相似性和时间一致性(视频的两个特性)，网络将supervisory信号从高置信度的片段传播到低置信度的片段。通过这种方式，网络能够为动作分类器提供cleaned supervision。在测试阶段，我们只需要从动作分类器中获取片段预测，无需做任何后处理。</p>
-<p><strong>针对问题：</strong>近年来，对新兴的二元分类范式进行了一些研究，训练数据包括异常和普通视频。只有视频级别的异常标签提供。之前的工作都把弱监督异常检测问题看做是多示例学习(multiple-instance learning)。我们换了角度，看作是noise labels下的监督学习任务。噪声标签指的是异常视频中正常片段的错误注释，因为标记“异常”的视频可能包含相当多的正常片段。因此，一旦清除了噪声标签，就可以直接训练完全监督的动作分类器。</p>
-<p><strong>方法：</strong>两个阶段，清洁和分类。清洁阶段中，训练一个cleaner来校正classifier得到的预测噪声，并且提供了更少噪声的refined labels。在分类阶段，action classifier使用cleaned labels重新训练并且产生更可靠的预测。cleaner的主要想法是通过高可信度预测的噪声来消除低可信度预测的噪声。设计了一个GCN来建立高可信度片段和低可信度片段之间的关系。在图中，片段被抽象成顶点 (vertexes) ，异常信息通过边 (edges) 传播。测试的时候，我们不需要cleaner，而是直接获得训练snippet-wise的异常结果。</p>
-<p>对两种类型的主流动作分类器进行了大量实验：C3D和TSN。</p>
-<p>（我们的label noise cleaner 的目标是在高可信度注释的监督下，在图（整个视频）中对节点（视频片段）进行分类。）</p>
-<p>Y=0(只包含正常片段的negative bag)是noiseless。而Y=1是noisy，因为部分是异常的。这就叫做one-sided label noise。</p>
-<p><strong>数据集：</strong>UCF-Crime Shanghai Tech UCSD-Peds</p>
-<p><img src="https://cy-pic.kuaizhan.com/g3/f8/88/685a-5724-4fc0-b6c3-413e36c3e69725" alt="图片"></p>
-<p><strong>灵感来源：</strong>[Sivan Sabato and Naftali Tishby. Multi-instance learning with any hypothesis class. Journal of Machine Learning Research, 13(1):2999–3039, Oct. 2012.] MIL任务可以被视为在one-sided label noise下学习。</p>
-<p>​         <img src="https://cy-pic.kuaizhan.com/g3/05/c3/e49d-b362-4248-910b-ce7f3a8fabbb48" alt="img">       </p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/11/11/异常行为检测文献整理-顶会顶刊/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
