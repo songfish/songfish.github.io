@@ -118,8 +118,8 @@
 <meta property="og:locale" content="EN">
 <meta property="og:image" content="https://ae01.alicdn.com/kf/H3479b38018a6479f88ad590934ec1649L.jpg">
 <meta property="og:image" content="https://ae01.alicdn.com/kf/H8ec91df4835d4f02ab8c900c57e7caa5M.jpg">
-<meta property="og:image" content="https://ae01.alicdn.com/kf/H62823cdb021c493db4e520822be4d62de.jpg">
-<meta property="og:image" content="https://ae01.alicdn.com/kf/H68ef4b63442c44ac973f29617d40f3baz.jpg">
+<meta property="og:image" content="https://ae01.alicdn.com/kf/Hf4649cb3fac0482bb45e18ec5e1ff2ebH.jpg">
+<meta property="og:image" content="https://ae01.alicdn.com/kf/H332f813492e644e488e6ec3b89a535f0G.jpg">
 <meta property="og:image" content="https://ae01.alicdn.com/kf/H9238e8c430f543479d198412b9d711dbJ.jpg">
 <meta property="og:image" content="https://ae01.alicdn.com/kf/HTB1GzbSdA5E3KVjSZFCq6zuzXXaQ.jpg">
 <meta property="og:image" content="https://ae01.alicdn.com/kf/He2d73e0096074fd2b4f8063626527f33e.jpg">
@@ -157,7 +157,7 @@
 <meta property="og:image" content="http://boketuchuang.oss-cn-beijing.aliyuncs.com/18-11-11/31332758.jpg">
 <meta property="og:image" content="http://boketuchuang.oss-cn-beijing.aliyuncs.com/18-11-11/42528664.jpg">
 <meta property="og:image" content="http://boketuchuang.oss-cn-beijing.aliyuncs.com/18-11-11/12979627.jpg">
-<meta property="og:updated_time" content="2019-10-08T01:30:59.631Z">
+<meta property="og:updated_time" content="2019-10-08T01:38:17.739Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="异常行为检测文献整理(顶会顶刊)">
 <meta name="twitter:description" content="2019Margin Learning Embedded Prediction for Video Anomaly Detection with A Few Anomalies创新点：提出了Margin Learning Em- bedded Prediction (MLEP) framework for open-set supervised anomaly detection。所提出的网络有三">
@@ -439,7 +439,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-10-08 09:30:59" itemprop="dateModified" datetime="2019-10-08T09:30:59+08:00">2019-10-08</time>
+                <time title="Modified: 2019-10-08 09:38:17" itemprop="dateModified" datetime="2019-10-08T09:38:17+08:00">2019-10-08</time>
               
             
           </span>
@@ -515,10 +515,12 @@
 <p><strong>贡献：</strong>1.设计了MLEP来进行open-set supervised 异常检测。2.设计了一个预测框架对预测正常行为有利。3.网络可通过帧级别以及视频级别的异常标记处理异常检测。</p>
 <p><strong>针对问题：</strong>unet有利于异常行为的预测；卷积编码器没有足够的能力编码运动信息进而预测正常帧；卷积lstm用历史运动信息，可能会预测异常行为。（说实话，这些理由都好牵强…）</p>
 <p><strong>网络结构：</strong><br><img src="https://ae01.alicdn.com/kf/H3479b38018a6479f88ad590934ec1649L.jpg" alt="img"></p>
-<p><img src="https://ae01.alicdn.com/kf/H8ec91df4835d4f02ab8c900c57e7caa5M.jpg" alt="img"><br>其中的margin learning模块的loss是triplet loss，灵感来自Person re- identification by multi-channel parts-based cnn with im- proved triplet loss function. 和A unified embedding for face recog- nition and clustering.<br><img src="https://ae01.alicdn.com/kf/H62823cdb021c493db4e520822be4d62de.jpg" alt="img"><br>整个的loss就是两个loss加起来。<br><img src="https://ae01.alicdn.com/kf/H68ef4b63442c44ac973f29617d40f3baz.jpg" alt="img"><br><strong>训练阶段：</strong>对于frame-level的标记，随机选择一个anchor，一个正样本和一个负样本来训练。对于bideo-level的标记，首先仅用正常数据训练一个基于预测的异常检测网络，这时不加triplet loss ，即λ=0。然后我们用训练好的模型预测正常和异常数据的正常分数。最后我们用sampled 片段来重新训练整个网络。测试阶段：仍然用PSNR来判断。越高表示越有可能是正常的。 </p>
+<p><img src="https://ae01.alicdn.com/kf/H8ec91df4835d4f02ab8c900c57e7caa5M.jpg" alt="img"><br>其中的margin learning模块的loss是triplet loss，灵感来自Person re- identification by multi-channel parts-based cnn with im- proved triplet loss function. 和A unified embedding for face recog- nition and clustering. </p>
+<p><img src="https://ae01.alicdn.com/kf/Hf4649cb3fac0482bb45e18ec5e1ff2ebH.jpg" alt="img"><br>整个的loss就是两个loss加起来。<br><img src="https://ae01.alicdn.com/kf/H332f813492e644e488e6ec3b89a535f0G.jpg" alt="img"><br><strong>训练阶段：</strong>对于frame-level的标记，随机选择一个anchor，一个正样本和一个负样本来训练。对于bideo-level的标记，首先仅用正常数据训练一个基于预测的异常检测网络，这时不加triplet loss ，即λ=0。然后我们用训练好的模型预测正常和异常数据的正常分数。最后我们用sampled 片段来重新训练整个网络。测试阶段：仍然用PSNR来判断。越高表示越有可能是正常的。 </p>
 <p><strong>实验细节：</strong>所有的帧resize成224X224。一个video snippet的长度是4。把测试集中的异常数据分成K折，每折仅包含一些异常事件，而不是全部的异常事件。K=10。训练的时候，把其中一折放进训练集中，然后把剩下的作为测试集。由此保证了测试集必须包含训练集没有包含的异常事件，测试集可能包含训练集中观察到的异常事件类型。为什么自己的预测的方法好也和别的方法进行了对比。用cyclegan的3个卷积层和6个残差块作为编码器，解码器用三个反卷积层。</p>
 <p><strong>数据集：</strong>Avenue 和shanghaitech。不用ucf crime是因为正常和异常数据的比例是均衡的，另外摄像头的角度变化，对于预测来说不理想。另外他是一个closed-set supervised异常检测，所以不进行比较。</p>
 <p><strong>疑惑的地方：</strong>4.2节imbalanced video classfication methods。</p>
+<a id="more"></a>
 <h3 id="Memorizing-Normality-to-Detect-Anomaly-Memory-augmented-Deep-Autoencoder-for-Unsupervised-Anomaly-Detection"><a href="#Memorizing-Normality-to-Detect-Anomaly-Memory-augmented-Deep-Autoencoder-for-Unsupervised-Anomaly-Detection" class="headerlink" title="Memorizing Normality to Detect Anomaly: Memory-augmented Deep Autoencoder for Unsupervised Anomaly Detection"></a>Memorizing Normality to Detect Anomaly: Memory-augmented Deep Autoencoder for Unsupervised Anomaly Detection</h3><p><strong>创新点：</strong>提出用一个memory module来augment 自编码器，叫做MemAE。MemAE首先从encoder获得编码，然后在训练阶段，记忆内容是更新的，测试时，学习到的记忆固定，从正常数据中选择一些记录的记忆得到重建。</p>
 <p><strong>针对问题：</strong>深度自编码器可能会很好地重建异常行为。比如，一些异常和正常的训练数据有相同的compositional patterns 或者decoder解码一些异常编码的时候太厉害了。</p>
 <p><strong>关键词：</strong> attention based memory addressing</p>
@@ -533,7 +535,6 @@
 <p><img src="https://ae01.alicdn.com/kf/HTB1GzbSdA5E3KVjSZFCq6zuzXXaQ.jpg" alt="图片"></p>
 <p><strong>灵感来源：</strong>[Sivan Sabato and Naftali Tishby. Multi-instance learning with any hypothesis class. Journal of Machine Learning Research, 13(1):2999–3039, Oct. 2012.] MIL任务可以被视为在one-sided label noise下学习。</p>
 <p>​         <img src="https://ae01.alicdn.com/kf/He2d73e0096074fd2b4f8063626527f33e.jpg" alt="img">       </p>
-<a id="more"></a>
 <h3 id="Learning-Regularity-in-Skeleton-Trajectories-for-Anomaly-Detection-in-Videos"><a href="#Learning-Regularity-in-Skeleton-Trajectories-for-Anomaly-Detection-in-Videos" class="headerlink" title="Learning Regularity in Skeleton Trajectories for Anomaly Detection in Videos"></a>Learning Regularity in Skeleton Trajectories for Anomaly Detection in Videos</h3><p><strong>创新点：</strong>用了dynamic skeleton features来建模人运动的正常模式。把skeletal movements分解成global body movement和local body posture。</p>
 <p>(Message-Passing Encoder-Decoder Recurrent Neural Network)</p>
 <p><strong>针对问题：</strong>1<strong>.</strong>现在的方法基于像素的外观特征和运动特征，然而基于像素的特征是高维非结构化信号，对噪声敏感，它掩盖了关于场景的重要信息；另外，这些特征中呈现的冗余的信息增加了对它们进行训练的模型的负担。2.另外一个现在方法的限制是由于视觉特征和事件真实含义之间存在语义鸿沟，缺乏可解释性。</p>
