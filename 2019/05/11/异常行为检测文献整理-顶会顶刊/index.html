@@ -157,7 +157,7 @@
 <meta property="og:image" content="http://boketuchuang.oss-cn-beijing.aliyuncs.com/18-11-11/31332758.jpg">
 <meta property="og:image" content="http://boketuchuang.oss-cn-beijing.aliyuncs.com/18-11-11/42528664.jpg">
 <meta property="og:image" content="http://boketuchuang.oss-cn-beijing.aliyuncs.com/18-11-11/12979627.jpg">
-<meta property="og:updated_time" content="2019-12-05T05:44:05.309Z">
+<meta property="og:updated_time" content="2019-12-05T05:47:33.389Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="异常行为检测文献整理(顶会顶刊)">
 <meta name="twitter:description" content="2019Latent Space Autoregression for Novelty Detection链接：paper、code 来源：CVPR2019 创新点： Margin Learning Embedded Prediction for Video Anomaly Detection with A Few Anomalies来源：IJCAI2019 创新点：提出了Margin Learn">
@@ -439,7 +439,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-12-05 13:44:05" itemprop="dateModified" datetime="2019-12-05T13:44:05+08:00">2019-12-05</time>
+                <time title="Modified: 2019-12-05 13:47:33" itemprop="dateModified" datetime="2019-12-05T13:47:33+08:00">2019-12-05</time>
               
             
           </span>
@@ -525,13 +525,13 @@
 <p><strong>数据集：</strong>Avenue 和shanghaitech。不用ucf crime是因为正常和异常数据的比例是均衡的，另外摄像头的角度变化，对于预测来说不理想。另外他是一个closed-set supervised异常检测，所以不进行比较。</p>
 <p><strong>疑惑的地方：</strong>4.2节imbalanced video classfication methods。</p>
 <a id="more"></a>
-<h3 id="Memorizing-Normality-to-Detect-Anomaly-Memory-augmented-Deep-Autoencoder-for-Unsupervised-Anomaly-Detection"><a href="#Memorizing-Normality-to-Detect-Anomaly-Memory-augmented-Deep-Autoencoder-for-Unsupervised-Anomaly-Detection" class="headerlink" title="Memorizing Normality to Detect Anomaly: Memory-augmented Deep Autoencoder for Unsupervised Anomaly Detection"></a>Memorizing Normality to Detect Anomaly: Memory-augmented Deep Autoencoder for Unsupervised Anomaly Detection</h3><p><strong>链接</strong>：[code][<a href="https://github.com/donggong1/memae-anomaly-detection]" target="_blank" rel="noopener">https://github.com/donggong1/memae-anomaly-detection]</a></p>
+<h3 id="Memorizing-Normality-to-Detect-Anomaly-Memory-augmented-Deep-Autoencoder-for-Unsupervised-Anomaly-Detection"><a href="#Memorizing-Normality-to-Detect-Anomaly-Memory-augmented-Deep-Autoencoder-for-Unsupervised-Anomaly-Detection" class="headerlink" title="Memorizing Normality to Detect Anomaly: Memory-augmented Deep Autoencoder for Unsupervised Anomaly Detection"></a>Memorizing Normality to Detect Anomaly: Memory-augmented Deep Autoencoder for Unsupervised Anomaly Detection</h3><p><strong>链接</strong>：<a href="https://github.com/donggong1/memae-anomaly-detection" target="_blank" rel="noopener">code</a></p>
 <p><strong>来源：</strong>ICCV2019</p>
 <p><strong>创新点：</strong>提出用一个memory module来augment 自编码器，叫做MemAE。MemAE首先从encoder获得编码，然后在训练阶段，记忆内容是更新的，测试时，学习到的记忆固定，从正常数据中选择一些记录的记忆得到重建。</p>
 <p><strong>针对问题：</strong>深度自编码器可能会很好地重建异常行为。比如，一些异常和正常的训练数据有相同的compositional patterns 或者decoder解码一些异常编码的时候太厉害了。</p>
 <p><strong>关键词：</strong> attention based memory addressing</p>
 <p><img src="https://ae01.alicdn.com/kf/H9238e8c430f543479d198412b9d711dbJ.jpg" alt=""></p>
-<h3 id="Graph-Convolutional-Label-Noise-Cleaner-Train-a-Plug-and-play-Action-Classifier-for-Anomaly-Detection"><a href="#Graph-Convolutional-Label-Noise-Cleaner-Train-a-Plug-and-play-Action-Classifier-for-Anomaly-Detection" class="headerlink" title="Graph Convolutional Label Noise Cleaner: Train a Plug-and-play Action Classifier for Anomaly Detection"></a>Graph Convolutional Label Noise Cleaner: Train a Plug-and-play Action Classifier for Anomaly Detection</h3><p><strong>链接：</strong>[code][<a href="https://github.com/jx-zhong-for-academic-purpose/GCN-Anomaly-Detection]" target="_blank" rel="noopener">https://github.com/jx-zhong-for-academic-purpose/GCN-Anomaly-Detection]</a></p>
+<h3 id="Graph-Convolutional-Label-Noise-Cleaner-Train-a-Plug-and-play-Action-Classifier-for-Anomaly-Detection"><a href="#Graph-Convolutional-Label-Noise-Cleaner-Train-a-Plug-and-play-Action-Classifier-for-Anomaly-Detection" class="headerlink" title="Graph Convolutional Label Noise Cleaner: Train a Plug-and-play Action Classifier for Anomaly Detection"></a>Graph Convolutional Label Noise Cleaner: Train a Plug-and-play Action Classifier for Anomaly Detection</h3><p><strong>链接：</strong><a href="https://github.com/jx-zhong-for-academic-purpose/GCN-Anomaly-Detection" target="_blank" rel="noopener">code</a></p>
 <p><strong>来源：</strong>CVPR2019</p>
 <p><strong>创新点：[首次用GCN来纠正视频分析领域的label noise]</strong> a supervised learning task under noisy labels。只要清除label noise，就可以直接将完全监督的动作分类器(fully supervised action classifiers)应用于弱监督的异常检测，并最大限度地利用这些完善的分类器。为此，设计了一个图卷积网络(graph convolutional network)来校正noisy labels。基于特征相似性和时间一致性(视频的两个特性)，网络将supervisory信号从高置信度的片段传播到低置信度的片段。通过这种方式，网络能够为动作分类器提供cleaned supervision。在测试阶段，我们只需要从动作分类器中获取片段预测，无需做任何后处理。</p>
 <p><strong>针对问题：</strong>近年来，对新兴的二元分类范式进行了一些研究，训练数据包括异常和普通视频。只有视频级别的异常标签提供。之前的工作都把弱监督异常检测问题看做是多示例学习(multiple-instance learning)。我们换了角度，看作是noise labels下的监督学习任务。噪声标签指的是异常视频中正常片段的错误注释，因为标记“异常”的视频可能包含相当多的正常片段。因此，一旦清除了噪声标签，就可以直接训练完全监督的动作分类器。</p>
@@ -543,7 +543,7 @@
 <p><img src="https://ae01.alicdn.com/kf/HTB1GzbSdA5E3KVjSZFCq6zuzXXaQ.jpg" alt="图片"></p>
 <p><strong>灵感来源：</strong>[Sivan Sabato and Naftali Tishby. Multi-instance learning with any hypothesis class. Journal of Machine Learning Research, 13(1):2999–3039, Oct. 2012.] MIL任务可以被视为在one-sided label noise下学习。</p>
 <p>​         <img src="https://ae01.alicdn.com/kf/He2d73e0096074fd2b4f8063626527f33e.jpg" alt="img">       </p>
-<h3 id="Learning-Regularity-in-Skeleton-Trajectories-for-Anomaly-Detection-in-Videos"><a href="#Learning-Regularity-in-Skeleton-Trajectories-for-Anomaly-Detection-in-Videos" class="headerlink" title="Learning Regularity in Skeleton Trajectories for Anomaly Detection in Videos"></a>Learning Regularity in Skeleton Trajectories for Anomaly Detection in Videos</h3><p><strong>链接：</strong>[code][<a href="https://github.com/RomeroBarata/skeleton_based_anomaly_detection]" target="_blank" rel="noopener">https://github.com/RomeroBarata/skeleton_based_anomaly_detection]</a></p>
+<h3 id="Learning-Regularity-in-Skeleton-Trajectories-for-Anomaly-Detection-in-Videos"><a href="#Learning-Regularity-in-Skeleton-Trajectories-for-Anomaly-Detection-in-Videos" class="headerlink" title="Learning Regularity in Skeleton Trajectories for Anomaly Detection in Videos"></a>Learning Regularity in Skeleton Trajectories for Anomaly Detection in Videos</h3><p><strong>链接：</strong><a href="https://github.com/RomeroBarata/skeleton_based_anomaly_detection" target="_blank" rel="noopener">code</a></p>
 <p><strong>来源：</strong>CVPR2019</p>
 <p><strong>创新点：</strong>用了dynamic skeleton features来建模人运动的正常模式。把skeletal movements分解成global body movement和local body posture。</p>
 <p>(Message-Passing Encoder-Decoder Recurrent Neural Network)</p>
@@ -559,7 +559,7 @@
 <p>​         <img src="https://ae01.alicdn.com/kf/H12ff9c27c01240bda3b1cca75ad4fa805.jpg" alt="img">       </p>
 <p>果然！作者用了AlphaPose来检测skeleton。</p>
 <h2 id="2018"><a href="#2018" class="headerlink" title="2018"></a>2018</h2><h3 id="real-world-anomaly-detection-in-surveillance-videos"><a href="#real-world-anomaly-detection-in-surveillance-videos" class="headerlink" title="real-world anomaly detection in surveillance videos"></a>real-world anomaly detection in surveillance videos</h3><p><img src="http://boketuchuang.oss-cn-beijing.aliyuncs.com/18-11-11/89215767.jpg" alt="图片"></p>
-<p><strong>链接：</strong>[code][<a href="https://github.com/WaqasSultani/AnomalyDetectionCVPR2018]" target="_blank" rel="noopener">https://github.com/WaqasSultani/AnomalyDetectionCVPR2018]</a></p>
+<p><strong>链接：</strong><a href="https://github.com/WaqasSultani/AnomalyDetectionCVPR2018" target="_blank" rel="noopener">code</a></p>
 <p><strong>来源：</strong>CVPR2018</p>
 <p><strong>使用的方法</strong>：MIL（multiple instance learning）多示例学习 </p>
 <p><strong>方法步骤：</strong></p>
@@ -576,7 +576,7 @@
 <p><strong>比较：</strong>主要和Learning temporal regularity in video sequences和Abnormal event detection at 150 fps in matlab的方法比较。</p>
 <p>【the first to formulate the video anomaly detection problem in the context of MIL】</p>
 <p><strong>个人感想与总结：</strong>（采用了什么方法，达到了什么效果，还有什么不太好的地方可以改进）作者采用MIL方法，同时利用正常和异常的视频，使用提出的deep MIL ranking loss来进行异常检测。【把异常检测作为一个回归问题】</p>
-<h3 id="Future-Frame-Prediction-for-anomaly-detection-a-new-baseline"><a href="#Future-Frame-Prediction-for-anomaly-detection-a-new-baseline" class="headerlink" title="Future Frame Prediction for anomaly detection-a new baseline"></a>Future Frame Prediction for anomaly detection-a new baseline</h3><p><strong>链接：</strong>[code][<a href="https://github.com/StevenLiuWen/ano_pred_cvpr2018]" target="_blank" rel="noopener">https://github.com/StevenLiuWen/ano_pred_cvpr2018]</a></p>
+<h3 id="Future-Frame-Prediction-for-anomaly-detection-a-new-baseline"><a href="#Future-Frame-Prediction-for-anomaly-detection-a-new-baseline" class="headerlink" title="Future Frame Prediction for anomaly detection-a new baseline"></a>Future Frame Prediction for anomaly detection-a new baseline</h3><p><strong>链接：</strong><a href="https://github.com/StevenLiuWen/ano_pred_cvpr2018" target="_blank" rel="noopener">code</a></p>
 <p><strong>来源</strong>：CVPR2018</p>
 <p><strong>创新点：</strong>在视频预测框架中解决异常检测问题。除了加spatial（<strong>Appearance</strong>）约束还加了temporal（<strong>motion</strong>）约束（光流）。也用到了GAN。<br><img src="http://boketuchuang.oss-cn-beijing.aliyuncs.com/18-11-11/34727984.jpg" alt="图片"></p>
 <p><strong>细节 ：1.作者为什么用U-net？</strong>因为现在的工作进行帧预测或者图像生成的通常包含两个模块，一个编码器能够通过逐渐地降低spatial resolution来提取特征，一个解码器能够通过增加spatial resolution来恢复帧。这样的结构有梯度消失问题和信息不平衡。U-net可以抑制梯度消失的问题。</p>
@@ -590,7 +590,7 @@
 <p>5.对于作者用的gap，计算的是正常帧的平均分数和异常帧的平均分数之间的gap。【这个平均分数是不是有一点点问题，就是有没有一些正常帧其实有很小的psnr，异常帧有很大的psnr，平均是不是抹去了一些差别..重要吗。会造成一定程度的漏检吧】。而且最后加constraint的多少，看到的gap不是差很多，就差一点，不过auc还是提高了一些的。</p>
 <p>6.在和conv-AE对比的时候，可以看到，ped1场景和avenue数据集并没有比conv-AE好太多。而且这个是平均之后的结果，真的有变好吗？</p>
 <p>7.在最后作者用toy dataset来评估效果的时候，出现了有时正常事件的运动方向也不确定的情况。【其实就是正常的事件有时也不能很好的预测呀】</p>
-<h3 id="Adversarially-Learned-One-Class-Classifier-for-Novelty-Detection"><a href="#Adversarially-Learned-One-Class-Classifier-for-Novelty-Detection" class="headerlink" title="Adversarially Learned One-Class Classifier for Novelty Detection"></a>Adversarially Learned One-Class Classifier for Novelty Detection</h3><p><strong>链接：</strong>[code][<a href="https://github.com/khalooei/ALOCC-CVPR2018]" target="_blank" rel="noopener">https://github.com/khalooei/ALOCC-CVPR2018]</a></p>
+<h3 id="Adversarially-Learned-One-Class-Classifier-for-Novelty-Detection"><a href="#Adversarially-Learned-One-Class-Classifier-for-Novelty-Detection" class="headerlink" title="Adversarially Learned One-Class Classifier for Novelty Detection"></a>Adversarially Learned One-Class Classifier for Novelty Detection</h3><p><strong>链接：</strong><a href="https://github.com/khalooei/ALOCC-CVPR2018" target="_blank" rel="noopener">code</a></p>
 <p><strong>来源</strong>：CVPR2018</p>
 <p><strong>创新点：【enhance inlier，distort outlier】</strong>(1)提出来一个端到端的结构进行one-class classification。(2)几乎其他的所有基于GAN的方法在训练之后或者抛弃了生成器或者抛弃了判别器。但我们的方法更有效，<strong>能够从两个训练的模块受益</strong>。(3)用在图片或视频中。</p>
 <p><strong>方法：</strong></p>
@@ -623,7 +623,7 @@
 <p><strong>题外话：</strong>【这些作者在17年的时候还写了一篇论文：Deep Appearance Features for Abnormal Behavior Detection in Video，前面的提特征方法相同。】</p>
 <h3 id="abnormal-event-detection-in-videos-using-generative-adversarial-nets"><a href="#abnormal-event-detection-in-videos-using-generative-adversarial-nets" class="headerlink" title="abnormal event detection in videos using generative adversarial nets"></a>abnormal event detection in videos using generative adversarial nets</h3><p><strong>来源</strong>：ICIP2017</p>
 <p><strong>方法：</strong>用正常的帧和对应的光流图来训练GAN，来学习正常场景的internal  representation。在测试的时候把真实的数据和GAN产生的外观和运动表示比较，通过计算local 不同来检测异常区域。<br>从raw-pixel frames<strong>产生光流图</strong>。</p>
-<h3 id="a-revisit-of-sparse-coding-based-anomaly-detection-in-stacked-RNN-framework"><a href="#a-revisit-of-sparse-coding-based-anomaly-detection-in-stacked-RNN-framework" class="headerlink" title="a revisit of sparse coding based anomaly detection in stacked RNN framework"></a>a revisit of sparse coding based anomaly detection in stacked RNN framework</h3><p><strong>链接</strong>：[code][<a href="https://github.com/StevenLiuWen/sRNN_TSC_Anomaly_Detection]" target="_blank" rel="noopener">https://github.com/StevenLiuWen/sRNN_TSC_Anomaly_Detection]</a></p>
+<h3 id="a-revisit-of-sparse-coding-based-anomaly-detection-in-stacked-RNN-framework"><a href="#a-revisit-of-sparse-coding-based-anomaly-detection-in-stacked-RNN-framework" class="headerlink" title="a revisit of sparse coding based anomaly detection in stacked RNN framework"></a>a revisit of sparse coding based anomaly detection in stacked RNN framework</h3><p><strong>链接</strong>：<a href="https://github.com/StevenLiuWen/sRNN_TSC_Anomaly_Detection" target="_blank" rel="noopener">code</a></p>
 <p><strong>来源</strong>：ICCV2017</p>
 <p><strong>摘要：</strong>提出了TSC（<strong>Temporally-coherent</strong> sparse coding），enforce 相似的相邻帧用相似的重建系数编码。之后用srnn映射TSC,方便了参数优化加速了异常预测。<strong>用sRNN同时学习所有参数</strong>，能够避免TSC的non-trivial的超参数选择。另外用浅层的sRNN，重建稀疏系数可以在前向传播中推断出来，节约了计算成本。</p>
 <p><strong>创新点：</strong>（1）提了TSC，可映射到sRNN方便了参数优化，加速了异常预测。（2）提了新数据集。作者这个新数据集的特点是不是特意设计异常事件，而是用在不同的spots安装的摄像头采集多种角度。</p>
@@ -640,7 +640,7 @@
 <p>​         <img src="https://ae01.alicdn.com/kf/H906777bcca3743abbd727ade2508833ei.jpg" alt="img">       </p>
 <p><strong>评估：</strong>作者有个<strong>挺好的</strong>想法，先用一个Synthesized Dataset评估自己的方法对于外观的突然变化导致的异常的表现如何。这个数据集是这样做的：从MINIST里面随意找两个数字，然后把他们放在225x225尺寸的黑背景中。然后在之后的19帧里，这两个数字随意的横向纵向运动。训练的时候用了10000个序列，对于每个测试的序列，5个连续的帧由随意插入的3x3白色的小方块随意的遮挡。测试集一共有3000个序列。如下图所示：<img src="http://boketuchuang.oss-cn-beijing.aliyuncs.com/18-11-11/24681967.jpg" alt="图片"></p>
 <p><strong>挑选数据集的一些考虑：</strong>不用subway是因为有不同的真实标记。uscd ped1更通常用在像素级别的异常检测中，本文做的是帧级别。</p>
-<h3 id="Remembering-History-With-Convolutional-LSTM-for-Anomaly-Detection"><a href="#Remembering-History-With-Convolutional-LSTM-for-Anomaly-Detection" class="headerlink" title="Remembering History With Convolutional LSTM for Anomaly Detection"></a>Remembering History With Convolutional LSTM for Anomaly Detection</h3><p><strong>链接</strong>：[code][<a href="https://github.com/zachluo/convlstm_anomaly_detection]" target="_blank" rel="noopener">https://github.com/zachluo/convlstm_anomaly_detection]</a></p>
+<h3 id="Remembering-History-With-Convolutional-LSTM-for-Anomaly-Detection"><a href="#Remembering-History-With-Convolutional-LSTM-for-Anomaly-Detection" class="headerlink" title="Remembering History With Convolutional LSTM for Anomaly Detection"></a>Remembering History With Convolutional LSTM for Anomaly Detection</h3><p><strong>链接</strong>：<a href="https://github.com/zachluo/convlstm_anomaly_detection" target="_blank" rel="noopener">code</a></p>
 <p><strong>来源</strong>：ICME2017—IEEE International Conference on Multimedia and Expo</p>
 <p><strong>摘要：</strong>用CNN对每一帧进行appearance encoding，用ConvLSTM来记忆过去的帧对应于运动信息。然后把cnn和convlstm和自编码器整合起来，称为ConvLSTM-AE学习正常的外观和运动信息。</p>
 <p><strong>baseline的缺点：</strong>Learning temporal regularity in video sequences, in CVPR, 2016。<strong>而3D卷积不能很好的encode motion</strong>。作者的全文的关注点，或者说改进比较都是在这篇上的。</p>
@@ -683,7 +683,7 @@
 <p><strong>2.</strong>用了最大池化，空间信息就丢失了，所以在反卷积网络中用了unpooling。</p>
 <p><strong>3</strong>.作者在4.1节画了这样的曲线：蓝色是表示在单一的数据集上训练的，红色表示在所有的数据集上训练的，黄色表示在除了要测试的数据集上训练的(足以表明transfer的能力)         <img src="https://ae01.alicdn.com/kf/H5edf427c496f4978b538af92baba9a4fD.jpg" alt="img">       </p>
 <p><strong>疑惑的地方：1.（3.1.1）</strong>ReLU is not suitable for a network that has large receptive fields for each neuron as the sum of the inputs to a neuron can become very large.<strong>2.（3.2.1）</strong>The learned filters in the deconvolutional layers serve as bases to reconstruct the shape of an input motion cuboid. As we stack the convolutional layers at the beginning of the network, we stack the deconvolutional layers to capture different levels of shape details for building an autoencoder. The filters in early layers of convolutional and the later layers of deconvolutional layers tend to capture specific motion signature of input video frames while high level motion abstractions are encoded in the filters in later layers.（这段话的用意在哪里）<strong>3.（4.3）</strong>这节都不知道在说啥…</p>
-<h3 id="A-discriminative-framework-for-anomaly-detection-in-large-videos"><a href="#A-discriminative-framework-for-anomaly-detection-in-large-videos" class="headerlink" title="A discriminative framework for anomaly detection in large videos"></a>A discriminative framework for anomaly detection in large videos</h3><p><strong>链接</strong>：[code][<a href="https://github.com/alliedel/anomalyframework_ECCV2016]" target="_blank" rel="noopener">https://github.com/alliedel/anomalyframework_ECCV2016]</a></p>
+<h3 id="A-discriminative-framework-for-anomaly-detection-in-large-videos"><a href="#A-discriminative-framework-for-anomaly-detection-in-large-videos" class="headerlink" title="A discriminative framework for anomaly detection in large videos"></a>A discriminative framework for anomaly detection in large videos</h3><p><strong>链接</strong>：<a href="https://github.com/alliedel/anomalyframework_ECCV2016" target="_blank" rel="noopener">code</a></p>
 <p><strong>来源</strong>：ECCV2016</p>
 <p><strong>创新点：</strong>异常的分数是独立于时间顺序的，不需要分开的训练序列。</p>
 <h2 id="2015"><a href="#2015" class="headerlink" title="2015"></a>2015</h2><h3 id="crowd-motion-monitoring-using-tracklet-based-commotion-measure"><a href="#crowd-motion-monitoring-using-tracklet-based-commotion-measure" class="headerlink" title="crowd motion monitoring using tracklet-based commotion measure"></a>crowd motion monitoring using tracklet-based commotion measure</h3><p><strong>来源</strong>：ICIP2015</p>
@@ -706,7 +706,7 @@
 <p>Temporal normalcy用MDT(mixtures of dynamic textures)建模，spatial normalcy由基于MDT的一个discriminant saliency 检测器来检测。</p>
 <p>考虑了外观和动态，时间和空间和多种空间规模。提出了USCD数据集。数据集的相关介绍可以看看这篇的6.1.这伙人在cvpr2010anomaly detection in crowded scenes出现过。</p>
 <p> 【就是同一篇论文吧。】</p>
-<h2 id="2013"><a href="#2013" class="headerlink" title="2013"></a>2013</h2><h3 id="abnormal-event-detection-at-150-fps-in-matlab"><a href="#abnormal-event-detection-at-150-fps-in-matlab" class="headerlink" title="abnormal event detection at 150 fps in matlab"></a>abnormal event detection at 150 fps in matlab</h3><p><strong>链接：</strong>[non-official code][<a href="https://github.com/kpandey008/Abnormal-Event-Detection]" target="_blank" rel="noopener">https://github.com/kpandey008/Abnormal-Event-Detection]</a></p>
+<h2 id="2013"><a href="#2013" class="headerlink" title="2013"></a>2013</h2><h3 id="abnormal-event-detection-at-150-fps-in-matlab"><a href="#abnormal-event-detection-at-150-fps-in-matlab" class="headerlink" title="abnormal event detection at 150 fps in matlab"></a>abnormal event detection at 150 fps in matlab</h3><p><strong>链接：</strong><a href="https://github.com/kpandey008/Abnormal-Event-Detection" target="_blank" rel="noopener">non-official code</a></p>
 <p><strong>来源</strong>：ICCV2013</p>
 <p><strong>里程碑：</strong>avenue数据集是他们弄的</p>
 <p><strong>引言：</strong>影响高效率的一个阻碍是建立稀疏表示的inherently intensive computation 。</p>
