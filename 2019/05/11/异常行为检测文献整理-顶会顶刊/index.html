@@ -161,7 +161,7 @@
 <meta property="og:image" content="http://boketuchuang.oss-cn-beijing.aliyuncs.com/18-11-11/31332758.jpg">
 <meta property="og:image" content="http://boketuchuang.oss-cn-beijing.aliyuncs.com/18-11-11/42528664.jpg">
 <meta property="og:image" content="http://boketuchuang.oss-cn-beijing.aliyuncs.com/18-11-11/12979627.jpg">
-<meta property="og:updated_time" content="2019-12-10T10:45:01.486Z">
+<meta property="og:updated_time" content="2019-12-11T06:23:11.924Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="异常行为检测文献整理(顶会顶刊)">
 <meta name="twitter:description" content="Timeline   2019.12.09  更新阅读笔记   来自CVPR2019《Object-centric Auto-encoders and Dummy Anomalies for Abnormal Event Detection in Video》   2019.12.10  更新阅读笔记  来自WACV2019 《Detecting Abnormal Events in Video">
@@ -443,7 +443,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-12-10 18:45:01" itemprop="dateModified" datetime="2019-12-10T18:45:01+08:00">2019-12-10</time>
+                <time title="Modified: 2019-12-11 14:23:11" itemprop="dateModified" datetime="2019-12-11T14:23:11+08:00">2019-12-11</time>
               
             
           </span>
@@ -567,6 +567,7 @@
 <p><strong>疑惑的地方：</strong>4.2节imbalanced video classfication methods。</p>
 <h3 id="Memorizing-Normality-to-Detect-Anomaly-Memory-augmented-Deep-Autoencoder-for-Unsupervised-Anomaly-Detection"><a href="#Memorizing-Normality-to-Detect-Anomaly-Memory-augmented-Deep-Autoencoder-for-Unsupervised-Anomaly-Detection" class="headerlink" title="Memorizing Normality to Detect Anomaly: Memory-augmented Deep Autoencoder for Unsupervised Anomaly Detection"></a>Memorizing Normality to Detect Anomaly: Memory-augmented Deep Autoencoder for Unsupervised Anomaly Detection</h3><p><strong>链接</strong>：<a href="https://github.com/donggong1/memae-anomaly-detection" target="_blank" rel="noopener">code</a></p>
 <p><strong>来源：</strong>ICCV2019</p>
+<p><strong>作者</strong>：和CVPR2019Learning Regularity in Skeleton Trajectories for Anomaly Detection in Videos大概是一个团队的。</p>
 <p><strong>创新点：</strong>提出用一个memory module来augment 自编码器，叫做MemAE。MemAE首先从encoder获得编码，然后在训练阶段，记忆内容是更新的，测试时，学习到的记忆固定，从正常数据中选择一些记录的记忆得到重建。</p>
 <p><strong>针对问题：</strong>深度自编码器可能会很好地重建异常行为。比如，一些异常和正常的训练数据有相同的compositional patterns 或者decoder解码一些异常编码的时候太厉害了。</p>
 <p><strong>关键词：</strong> attention based memory addressing</p>
