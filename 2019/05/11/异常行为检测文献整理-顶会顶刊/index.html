@@ -170,7 +170,7 @@
 <meta property="og:image" content="http://boketuchuang.oss-cn-beijing.aliyuncs.com/18-11-11/31332758.jpg">
 <meta property="og:image" content="http://boketuchuang.oss-cn-beijing.aliyuncs.com/18-11-11/42528664.jpg">
 <meta property="og:image" content="http://boketuchuang.oss-cn-beijing.aliyuncs.com/18-11-11/12979627.jpg">
-<meta property="og:updated_time" content="2019-12-24T01:15:16.069Z">
+<meta property="og:updated_time" content="2019-12-24T01:23:27.601Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="异常行为检测文献整理(顶会顶刊)">
 <meta name="twitter:description" content="Timeline   2019.12.09  更新阅读笔记   来自CVPR2019《Object-centric Auto-encoders and Dummy Anomalies for Abnormal Event Detection in Video》   2019.12.10  更新阅读笔记  来自WACV2019 《Detecting Abnormal Events in Video">
@@ -452,7 +452,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-12-24 09:15:16" itemprop="dateModified" datetime="2019-12-24T09:15:16+08:00">2019-12-24</time>
+                <time title="Modified: 2019-12-24 09:23:27" itemprop="dateModified" datetime="2019-12-24T09:23:27+08:00">2019-12-24</time>
               
             
           </span>
@@ -536,6 +536,7 @@
 <p><strong>网络结构</strong>：</p>
 <p><img src="https://pic.superbed.cn/item/5dff1d0576085c328934f6c2.jpg" alt="img"></p>
 <p>【生成器部分】网络包括两个处理流，第一个是通过Conv-AE学习正常事件中的共同外观空间结构，第二个是确定每个输入的pattern和它的对应的运动（由三通道的光流表示）之间的关联。U-Net中的跳层连接对于图像翻译来说是有用的因为能够直接将低层次的特征从原始域转换为编码的特征。这样的跳层连接不用在外观流中，因为网络会让输入的信息通过这些连接，就不能通过bottleneck来强调underlying的属性了。网络不用全连接层，所以（理论上）可以处理任何分辨率的图像。</p>
+<a id="more"></a>
 <p><img src="https://pic1.superbed.cn/item/5e00bb3776085c3289de1384.jpg" alt="img"></p>
 <p>【判别器部分】这个部分的网络不用在测试阶段。</p>
 <p><strong>损失函数</strong>:</p>
@@ -564,7 +565,6 @@
 <p><strong>结果</strong>：frame-level AUC—-Avenue90.4  ShanghaiTech84.9  Ped2 97.8 UMN 99.6。帧率11fps（这个有点太慢了，时间用来检测了）。</p>
 <p><strong>可以借鉴的地方</strong>：消融实验的部分—做了这么几个实验。1.frame-level自编码器+ocsvm【one-class SVM】，说明提取对象为中心的特征和用one-versus-rest SVM有用；2. frame-level自编码器+one-versus-rest SVM，说明one-versus-rest SVM确实有用。3.预训练的ssd特征+one-versus-rest SVM，说明自编码器学习特征的重要性；4.object-centric CAE只保留外观或者运动特征，说明运动特征和外观特征的相关性。5.object-centric CAE+ocSVM，说明把异常检测当成多分类任务有用。</p>
 <p><strong>不足之处</strong>：检测的时候如果出现遮挡，如两人重叠，就会误报（正常被判断为异常，false positive）。</p>
-<a id="more"></a>
 <h3 id="Latent-Space-Autoregression-for-Novelty-Detection"><a href="#Latent-Space-Autoregression-for-Novelty-Detection" class="headerlink" title="Latent Space Autoregression for Novelty Detection"></a>Latent Space Autoregression for Novelty Detection</h3><p><strong>链接</strong>：<a href="https://arxiv.org/pdf/1807.01653.pdf" target="_blank" rel="noopener">paper</a>、<a href="https://github.com/aimagelab/novelty-detection" target="_blank" rel="noopener">code</a></p>
 <p><strong>来源：</strong>CVPR2019</p>
 <p><strong>摘要：</strong>将一个参数密度估计器（parametric density estimator）加在自编码器上。参数密度估计器通过自回归过程（autoregressive procedure）学习潜在表示的概率分布。与正常样本的重建相结合进行优化的最大似然目标，通过最小化潜在向量分布的差分熵（differential entropy），有效地充当了调节器（regularizer）。</p>

@@ -791,7 +791,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-12-24 09:15:16" itemprop="dateModified" datetime="2019-12-24T09:15:16+08:00">2019-12-24</time>
+                <time title="Modified: 2019-12-24 09:23:27" itemprop="dateModified" datetime="2019-12-24T09:23:27+08:00">2019-12-24</time>
               
             
           </span>
@@ -876,34 +876,6 @@
 <p><strong>网络结构</strong>：</p>
 <p><img src="https://pic.superbed.cn/item/5dff1d0576085c328934f6c2.jpg" alt="img"></p>
 <p>【生成器部分】网络包括两个处理流，第一个是通过Conv-AE学习正常事件中的共同外观空间结构，第二个是确定每个输入的pattern和它的对应的运动（由三通道的光流表示）之间的关联。U-Net中的跳层连接对于图像翻译来说是有用的因为能够直接将低层次的特征从原始域转换为编码的特征。这样的跳层连接不用在外观流中，因为网络会让输入的信息通过这些连接，就不能通过bottleneck来强调underlying的属性了。网络不用全连接层，所以（理论上）可以处理任何分辨率的图像。</p>
-<p><img src="https://pic1.superbed.cn/item/5e00bb3776085c3289de1384.jpg" alt="img"></p>
-<p>【判别器部分】这个部分的网络不用在测试阶段。</p>
-<p><strong>损失函数</strong>:</p>
-<p>Appearance 部分和motion部分的loss function</p>
-<p><img src="https://pic2.superbed.cn/item/5e00ba0476085c3289dd88d6.jpg" alt="img"></p>
-<p><img src="https://pic.superbed.cn/item/5e00bec476085c3289dfafe3.jpg" alt="img"></p>
-<p>最后GAN网络的loss function</p>
-<p><img src="https://pic2.superbed.cn/item/5e00bf7276085c3289dffccf.jpg" alt="img"></p>
-<p><img src="https://pic1.superbed.cn/item/5e00bfad76085c3289e01cbf.jpg" alt="img"></p>
-<p><strong>结果</strong>：<img src="https://pic2.superbed.cn/item/5e00c22e76085c3289e1f135.jpg" alt="img"></p>
-<p>最后一列可借鉴，很直观。第一列是输入的帧和原始的光流，第二列是重建帧和预测的光流。</p>
-<p><img src="https://pic1.superbed.cn/item/5e00c35176085c3289e32f5b.jpg" alt="img"></p>
-<p><strong>数据集</strong>：Avenue，UCSD Ped2。不用Ped1的原因是，FlowNet2不适合于距离摄像机太远的小而瘦的行人，另外就是在训练集中标注为正常的行为在测试集中却是异常。</p>
-<p><strong>新的评估方法</strong>：【仅考虑小块而不是整个frame】frame-level score</p>
-<p><img src="https://pic3.superbed.cn/item/5e00c88376085c3289e64567.jpg" alt="img"></p>
-<h3 id="Object-centric-Auto-encoders-and-Dummy-Anomalies-for-Abnormal-Event-Detection-in-Video"><a href="#Object-centric-Auto-encoders-and-Dummy-Anomalies-for-Abnormal-Event-Detection-in-Video" class="headerlink" title="Object-centric Auto-encoders and Dummy Anomalies for Abnormal Event Detection in Video"></a>Object-centric Auto-encoders and Dummy Anomalies for Abnormal Event Detection in Video</h3><p><strong>链接：</strong><a href="https://github.com/fjchange/object_centric_VAD" target="_blank" rel="noopener">unofficial code</a></p>
-<p><strong>来源</strong>：CVPR2019</p>
-<p><strong>作者</strong>：作者和Detecting Abnormal Events in Video Using Narrowed Normality Clusters【WACV2019】、Deep Appearance Features for Abnormal Behavior Detection in Video【ICIAP2017】、Unmasking the abnormal events in video【ICCV2017】为同一个团队。</p>
-<p><strong>创新点</strong>：第一次将异常检测当成可区分的多类分类问题（discriminative multi-class classification problem）。</p>
-<p><strong>贡献</strong>：1.引入了一种基于对象为中心的卷积自编码器 (object-centric convolutional auto-encoders) 的无监督特征学习框架，以编码运动和外观信息。2. 我们提出了一种基于训练样本聚类为正常簇 (normality clusters) 的监督分类方法 [即对正常行为分了类]。用一个one-versus-rest的异常事件分类器将每个正常聚类和其他的分开。</p>
-<p><strong>数据集：</strong>Avenue、ShanghaiTech、UCSD ped2 和 UMN</p>
-<p><strong>灵感来源</strong>：R. Hinami, T. Mei, and S. Satoh. Joint Detection and Recounting of Abnormal Events by Learning Deep Generic Knowledge. In <em>Proceedings of ICCV</em>, pages 3639–3647, 2017. 和这篇文章的不同在于这篇文章用了ssd检测。在特征提取阶段，hinami等人在多个视觉任务上微调了Fast R-CNN模型的分类分支，以利用语义信息来检测和描述异常事件，而这篇论文用卷积自编码器来学习无监督的深度特征。</p>
-<p><strong>方法</strong>：整个网络分成四个阶段：<strong>目标检测阶段</strong>、<strong>特征学习阶段</strong>、<strong>训练</strong>和<strong>测试</strong>阶段。<strong>目标检测阶段</strong>——用包围框将目标切下来，然后切下来的图片送到特征学习阶段，同时计算代表运动的梯度，然后把梯度也送到特征学习阶段，见下图。<strong>特征学习阶段</strong>——将两个梯度和剪裁后的图片分别送到三个卷积自编码器中。每个隐藏层为8x8x16，最后的特征向量为3072维。<strong>训练阶段</strong>——通过构建一个context，在这个context中，正常样本中的一个子集相对另一个子集相当于虚拟异常样本，来弥补真实异常样本缺少的问题，方法就是用k-means进行聚类。<strong>测试阶段</strong>—— 每个测试样本x被k个SVM模型分类，最高的被认为是异常样本，由下式计算。</p>
-<p><img src="https://ae01.alicdn.com/kf/H790c645575554ff89e4876b53660a45bM.jpg" alt="img"></p>
-<p><img src="https://ae01.alicdn.com/kf/H6fe6349c078f4a8e8a6573875aa72f0f6.jpg" alt="img"></p>
-<p><strong>结果</strong>：frame-level AUC—-Avenue90.4  ShanghaiTech84.9  Ped2 97.8 UMN 99.6。帧率11fps（这个有点太慢了，时间用来检测了）。</p>
-<p><strong>可以借鉴的地方</strong>：消融实验的部分—做了这么几个实验。1.frame-level自编码器+ocsvm【one-class SVM】，说明提取对象为中心的特征和用one-versus-rest SVM有用；2. frame-level自编码器+one-versus-rest SVM，说明one-versus-rest SVM确实有用。3.预训练的ssd特征+one-versus-rest SVM，说明自编码器学习特征的重要性；4.object-centric CAE只保留外观或者运动特征，说明运动特征和外观特征的相关性。5.object-centric CAE+ocSVM，说明把异常检测当成多分类任务有用。</p>
-<p><strong>不足之处</strong>：检测的时候如果出现遮挡，如两人重叠，就会误报（正常被判断为异常，false positive）。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/05/11/异常行为检测文献整理-顶会顶刊/#more" rel="contents">
