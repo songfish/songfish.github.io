@@ -791,7 +791,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-12-24 09:31:04" itemprop="dateModified" datetime="2019-12-24T09:31:04+08:00">2019-12-24</time>
+                <time title="Modified: 2019-12-25 16:59:36" itemprop="dateModified" datetime="2019-12-25T16:59:36+08:00">2019-12-25</time>
               
             
           </span>
@@ -874,7 +874,7 @@
 <p><strong>和前人的不同</strong>：和2016Hasan等人的方法不同点在于，本文的Conv-AE的输入是单帧，时间因素是通过u-net来考虑的，而Hasan等人的Conv-AE的输入要么是手工特征要么是10帧。和2017Ravanbakhsh等人不同的地方在于，本文的网络将帧翻译为光流（但是不用pix2pix GAN），同时用共享encoding flow的Conv-AE代替另外一个U-Net，而Ravanbaksh等人的方法的两个相同的CNN可能太冗余了。2018liuwen等人的方法用U-Net来预测帧，本文直接从单帧来预测光流为了确定场景外观和典型运动之间的关系。</p>
 <p><strong>贡献</strong>：1.设计了一个结合Conv-AE和U-Net的CNN。可端到端训练。2.在输入层之后整合了一个Inception模块【Rethinking the inception architecture for computer vision】来减少网络深度的影响。3.提出了一个patch-based 方案来估计帧级别的normality分数，减少模型输出中出现的噪声影响。</p>
 <p><strong>网络结构</strong>：</p>
-<p><img src="/Users/songyu/Desktop/5dff1d0576085c328934f6c2.png" alt="img"></p>
+<p><img src="https://pic.superbed.cn/item/5e0324ea76085c328902463d.jpg" alt="img"></p>
 <p>【生成器部分】网络包括两个处理流，第一个是通过Conv-AE学习正常事件中的共同外观空间结构，第二个是确定每个输入的pattern和它的对应的运动（由三通道的光流表示）之间的关联。U-Net中的跳层连接对于图像翻译来说是有用的因为能够直接将低层次的特征从原始域转换为编码的特征。这样的跳层连接不用在外观流中，因为网络会让输入的信息通过这些连接，就不能通过bottleneck来强调underlying的属性了。网络不用全连接层，所以（理论上）可以处理任何分辨率的图像。</p>
           <!--noindex-->
           <div class="post-button text-center">
