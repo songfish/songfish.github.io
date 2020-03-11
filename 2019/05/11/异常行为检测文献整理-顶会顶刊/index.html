@@ -135,7 +135,7 @@
 <meta property="og:image" content="https://ae01.alicdn.com/kf/H332f813492e644e488e6ec3b89a535f0G.jpg">
 <meta property="og:image" content="https://ae01.alicdn.com/kf/H9238e8c430f543479d198412b9d711dbJ.jpg">
 <meta property="og:image" content="https://ae01.alicdn.com/kf/HTB1GzbSdA5E3KVjSZFCq6zuzXXaQ.jpg">
-<meta property="og:image" content="https://ae01.alicdn.com/kf/He2d73e0096074fd2b4f8063626527f33e.jpg">
+<meta property="og:image" content="http://yoursite.com/Users/songyu/Desktop/He2d73e0096074fd2b4f8063626527f33e.png">
 <meta property="og:image" content="https://ae01.alicdn.com/kf/H7ed4edce4f85450fb58d79625736dcac5.jpg">
 <meta property="og:image" content="https://ae01.alicdn.com/kf/H14f2ef3986bf42d1a74ba466bde56b9dZ.jpg">
 <meta property="og:image" content="https://ae01.alicdn.com/kf/H12ff9c27c01240bda3b1cca75ad4fa805.jpg">
@@ -170,7 +170,7 @@
 <meta property="og:image" content="http://boketuchuang.oss-cn-beijing.aliyuncs.com/18-11-11/31332758.jpg">
 <meta property="og:image" content="http://boketuchuang.oss-cn-beijing.aliyuncs.com/18-11-11/42528664.jpg">
 <meta property="og:image" content="http://boketuchuang.oss-cn-beijing.aliyuncs.com/18-11-11/12979627.jpg">
-<meta property="og:updated_time" content="2019-12-25T08:59:36.735Z">
+<meta property="og:updated_time" content="2020-03-11T08:46:51.596Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="异常行为检测文献整理(顶会顶刊)">
 <meta name="twitter:description" content="Timeline   2019.12.09  更新阅读笔记   来自CVPR2019《Object-centric Auto-encoders and Dummy Anomalies for Abnormal Event Detection in Video》   2019.12.10  更新阅读笔记  来自WACV2019 《Detecting Abnormal Events in Video">
@@ -452,7 +452,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-12-25 16:59:36" itemprop="dateModified" datetime="2019-12-25T16:59:36+08:00">2019-12-25</time>
+                <time title="Modified: 2020-03-11 16:46:51" itemprop="dateModified" datetime="2020-03-11T16:46:51+08:00">2020-03-11</time>
               
             
           </span>
@@ -529,7 +529,8 @@
 <p>  <strong>2019.12.10  更新阅读笔记  来自WACV2019 《Detecting Abnormal Events in Video Using Narrowed Normality Clusters》</strong></p>
 <p><strong>2019.12.23 更新阅读笔记 来自ICCV2019 《Anomaly Detection in Video Sequence With Appearance-Motion Correspondence》</strong></p>
 <hr>
-<h2 id="2019"><a href="#2019" class="headerlink" title="2019"></a>2019</h2><h3 id="Anomaly-Detection-in-Video-Sequence-With-Appearance-Motion-Correspondence"><a href="#Anomaly-Detection-in-Video-Sequence-With-Appearance-Motion-Correspondence" class="headerlink" title="Anomaly Detection in Video Sequence With Appearance-Motion Correspondence"></a>Anomaly Detection in Video Sequence With Appearance-Motion Correspondence</h3><p><strong>来源：</strong>ICCV2019</p>
+<h2 id="2019"><a href="#2019" class="headerlink" title="2019"></a>2019</h2><h3 id="Anomaly-Detection-in-Video-Sequence-With-Appearance-Motion-Correspondence"><a href="#Anomaly-Detection-in-Video-Sequence-With-Appearance-Motion-Correspondence" class="headerlink" title="Anomaly Detection in Video Sequence With Appearance-Motion Correspondence"></a>Anomaly Detection in Video Sequence With Appearance-Motion Correspondence</h3><p><strong>链接</strong>：<a href="https://github.com/nguyetn89/Anomaly_detection_ICCV2019" target="_blank" rel="noopener">code</a></p>
+<p><strong>来源：</strong>ICCV2019</p>
 <p><strong>创新点：</strong>提出了一种深度卷积神经网络（CNN），学习常见对象外观（例如行人，背景，树木等）及其关联运动之间的对应关系。 所设计的网络由共享相同编码器的重建网络和图像翻译模型组成。 </p>
 <p><strong>和前人的不同</strong>：和2016Hasan等人的方法不同点在于，本文的Conv-AE的输入是单帧，时间因素是通过u-net来考虑的，而Hasan等人的Conv-AE的输入要么是手工特征要么是10帧。和2017Ravanbakhsh等人不同的地方在于，本文的网络将帧翻译为光流（但是不用pix2pix GAN），同时用共享encoding flow的Conv-AE代替另外一个U-Net，而Ravanbaksh等人的方法的两个相同的CNN可能太冗余了。2018liuwen等人的方法用U-Net来预测帧，本文直接从单帧来预测光流为了确定场景外观和典型运动之间的关系。</p>
 <p><strong>贡献</strong>：1.设计了一个结合Conv-AE和U-Net的CNN。可端到端训练。2.在输入层之后整合了一个Inception模块【Rethinking the inception architecture for computer vision】来减少网络深度的影响。3.提出了一个patch-based 方案来估计帧级别的normality分数，减少模型输出中出现的噪声影响。</p>
@@ -615,7 +616,7 @@
 <p><strong>数据集：</strong>UCF-Crime Shanghai Tech UCSD-Peds</p>
 <p><img src="https://ae01.alicdn.com/kf/HTB1GzbSdA5E3KVjSZFCq6zuzXXaQ.jpg" alt="图片"></p>
 <p><strong>灵感来源：</strong>[Sivan Sabato and Naftali Tishby. Multi-instance learning with any hypothesis class. Journal of Machine Learning Research, 13(1):2999–3039, Oct. 2012.] MIL任务可以被视为在one-sided label noise下学习。</p>
-<p>​         <img src="https://ae01.alicdn.com/kf/He2d73e0096074fd2b4f8063626527f33e.jpg" alt="img">       </p>
+<p>​         <img src="/Users/songyu/Desktop/He2d73e0096074fd2b4f8063626527f33e.png" alt="img">       </p>
 <h3 id="Learning-Regularity-in-Skeleton-Trajectories-for-Anomaly-Detection-in-Videos"><a href="#Learning-Regularity-in-Skeleton-Trajectories-for-Anomaly-Detection-in-Videos" class="headerlink" title="Learning Regularity in Skeleton Trajectories for Anomaly Detection in Videos"></a>Learning Regularity in Skeleton Trajectories for Anomaly Detection in Videos</h3><p><strong>链接：</strong><a href="https://github.com/RomeroBarata/skeleton_based_anomaly_detection" target="_blank" rel="noopener">code</a></p>
 <p><strong>来源：</strong>CVPR2019</p>
 <p><strong>创新点：</strong>用了dynamic skeleton features来建模人运动的正常模式。把skeletal movements分解成global body movement和local body posture。</p>
@@ -1122,7 +1123,7 @@ show_date_time();
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
