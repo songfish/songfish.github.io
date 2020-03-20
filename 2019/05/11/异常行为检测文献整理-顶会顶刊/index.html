@@ -170,7 +170,7 @@
 <meta property="og:image" content="http://boketuchuang.oss-cn-beijing.aliyuncs.com/18-11-11/31332758.jpg">
 <meta property="og:image" content="http://boketuchuang.oss-cn-beijing.aliyuncs.com/18-11-11/42528664.jpg">
 <meta property="og:image" content="http://boketuchuang.oss-cn-beijing.aliyuncs.com/18-11-11/12979627.jpg">
-<meta property="og:updated_time" content="2020-03-11T08:46:51.596Z">
+<meta property="og:updated_time" content="2020-03-20T11:39:11.983Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="异常行为检测文献整理(顶会顶刊)">
 <meta name="twitter:description" content="Timeline   2019.12.09  更新阅读笔记   来自CVPR2019《Object-centric Auto-encoders and Dummy Anomalies for Abnormal Event Detection in Video》   2019.12.10  更新阅读笔记  来自WACV2019 《Detecting Abnormal Events in Video">
@@ -452,7 +452,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2020-03-11 16:46:51" itemprop="dateModified" datetime="2020-03-11T16:46:51+08:00">2020-03-11</time>
+                <time title="Modified: 2020-03-20 19:39:11" itemprop="dateModified" datetime="2020-03-20T19:39:11+08:00">2020-03-20</time>
               
             
           </span>
@@ -589,15 +589,14 @@
 <p><strong>误检的情况</strong>（正常被检测为异常）：Avenue中两个人同步行走；一个人被遮挡；包在空中，在人扔包之前；Subway中一个奔跑的人和两个同步行走的人；UMN中一个人打开门进来或出去（对光的变化不鲁棒）。</p>
 <p><strong>疑惑的地方：</strong>3.1 这几个增强的方法具体是怎么操作的。</p>
 <h3 id="Margin-Learning-Embedded-Prediction-for-Video-Anomaly-Detection-with-A-Few-Anomalies"><a href="#Margin-Learning-Embedded-Prediction-for-Video-Anomaly-Detection-with-A-Few-Anomalies" class="headerlink" title="Margin Learning Embedded Prediction for Video Anomaly Detection with A Few Anomalies"></a>Margin Learning Embedded Prediction for Video Anomaly Detection with A Few Anomalies</h3><p><strong>来源：</strong>IJCAI2019</p>
-<p><strong>创新点：</strong>提出了Margin Learning Em- bedded Prediction (MLEP) framework for open-set supervised anomaly detection。所提出的网络有三个特征，第一，将每一帧的特征顺序输入到ConvLSTM中，更好地编码时间和空间信息。第二，把margin learning 嵌入网络结构中。有助于观测到和未观测到的异常的检测。第三，能够通过帧级别和视频级别的异常标记处理异常检测。</p>
+<p><strong>创新点：</strong>提出了Margin Learning Embedded Prediction (MLEP) framework for open-set supervised anomaly detection。所提出的网络有三个特征，第一，将每一帧的特征顺序输入到ConvLSTM中，更好地编码时间和空间信息。第二，把margin learning 嵌入网络结构中。有助于观测到和未观测到的异常的检测。第三，能够通过帧级别和视频级别的异常标记处理异常检测。</p>
 <p><strong>贡献：</strong>1.设计了MLEP来进行open-set supervised 异常检测。2.设计了一个预测框架对预测正常行为有利。3.网络可通过帧级别以及视频级别的异常标记处理异常检测。</p>
-<p><strong>针对问题：</strong>unet有利于异常行为的预测；卷积编码器没有足够的能力编码运动信息进而预测正常帧；卷积lstm用历史运动信息，可能会预测异常行为。（说实话，这些理由都好牵强…）</p>
+<p><strong>针对问题：</strong>unet有利于异常行为的预测；传统的编码器没有足够的能力编码运动信息进而预测正常帧；卷积lstm用观测帧的历史运动信息，可能会预测异常行为。</p>
 <p><strong>网络结构：</strong><br><img src="https://ae01.alicdn.com/kf/H3479b38018a6479f88ad590934ec1649L.jpg" alt="img"></p>
-<p><img src="https://ae01.alicdn.com/kf/H8ec91df4835d4f02ab8c900c57e7caa5M.jpg" alt="img"><br>其中的margin learning模块的loss是triplet loss，灵感来自Person re- identification by multi-channel parts-based cnn with im- proved triplet loss function. 和A unified embedding for face recog- nition and clustering. </p>
-<p><img src="https://ae01.alicdn.com/kf/Hf4649cb3fac0482bb45e18ec5e1ff2ebH.jpg" alt="img"><br>整个的loss就是两个loss加起来。<br><img src="https://ae01.alicdn.com/kf/H332f813492e644e488e6ec3b89a535f0G.jpg" alt="img"><br><strong>训练阶段：</strong>对于frame-level的标记，随机选择一个anchor，一个正样本和一个负样本来训练。对于video-level的标记，首先仅用正常数据训练一个基于预测的异常检测网络，这时不加triplet loss ，即λ=0。然后我们用训练好的模型预测正常和异常数据的正常分数。最后我们用sampled 片段来重新训练整个网络。测试阶段：仍然用PSNR来判断。越高表示越有可能是正常的。 </p>
+<p><img src="https://ae01.alicdn.com/kf/H8ec91df4835d4f02ab8c900c57e7caa5M.jpg" alt="img"><br>其中的margin learning模块的loss是triplet loss，灵感来自Person re- identification by multi-channel parts-based cnn with im- proved triplet loss function. 和A unified embedding for face recognition and clustering. </p>
+<p><img src="https://ae01.alicdn.com/kf/Hf4649cb3fac0482bb45e18ec5e1ff2ebH.jpg" alt="img"><br>整个的loss就是两个loss加起来。<br><img src="https://ae01.alicdn.com/kf/H332f813492e644e488e6ec3b89a535f0G.jpg" alt="img"><br><strong>训练阶段：</strong>对于frame-level的标记，随机选择一个anchor，一个正样本和一个负样本来训练。对于video-level的标记，首先仅用正常数据训练一个基于预测的异常检测网络，这时不加triplet loss ，即λ=0。然后我们用训练好的模型预测正常和异常数据的正常分数。最后我们用sampled triplets来重新训练整个网络。测试阶段：仍然用PSNR来判断。越高表示越有可能是正常的。 </p>
 <p><strong>实验细节：</strong>所有的帧resize成224X224。一个video snippet的长度是4。把测试集中的异常数据分成K折，每折仅包含一些异常事件，而不是全部的异常事件。K=10。训练的时候，把其中一折放进训练集中，然后把剩下的作为测试集。由此保证了测试集必须包含训练集没有包含的异常事件，测试集可能包含训练集中观察到的异常事件类型。为什么自己的预测的方法好也和别的方法进行了对比。用cyclegan的3个卷积层和6个残差块作为编码器，解码器用三个反卷积层。</p>
 <p><strong>数据集：</strong>Avenue 和shanghaitech。不用ucf crime是因为正常和异常数据的比例是均衡的，另外摄像头的角度变化，对于预测来说不理想。另外他是一个closed-set supervised异常检测，所以不进行比较。</p>
-<p><strong>疑惑的地方：</strong>4.2节imbalanced video classfication methods。</p>
 <h3 id="Memorizing-Normality-to-Detect-Anomaly-Memory-augmented-Deep-Autoencoder-for-Unsupervised-Anomaly-Detection"><a href="#Memorizing-Normality-to-Detect-Anomaly-Memory-augmented-Deep-Autoencoder-for-Unsupervised-Anomaly-Detection" class="headerlink" title="Memorizing Normality to Detect Anomaly: Memory-augmented Deep Autoencoder for Unsupervised Anomaly Detection"></a>Memorizing Normality to Detect Anomaly: Memory-augmented Deep Autoencoder for Unsupervised Anomaly Detection</h3><p><strong>链接</strong>：<a href="https://github.com/donggong1/memae-anomaly-detection" target="_blank" rel="noopener">code</a></p>
 <p><strong>来源：</strong>ICCV2019</p>
 <p><strong>作者</strong>：和CVPR2019Learning Regularity in Skeleton Trajectories for Anomaly Detection in Videos是一个团队的。</p>
