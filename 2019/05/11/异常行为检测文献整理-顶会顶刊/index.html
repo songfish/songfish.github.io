@@ -116,11 +116,11 @@
 <meta property="og:site_name" content="求索">
 <meta property="og:description" content="Timeline  2019.12.09  更新阅读笔记   来自CVPR2019《Object-centric Auto-encoders and Dummy Anomalies for Abnormal Event Detection in Video》  2019.12.10  更新阅读笔记  来自WACV2019 《Detecting Abnormal Events in Video Us">
 <meta property="og:locale" content="EN">
-<meta property="og:image" content="http://yoursite.com/Users/songyu/Library/Application%20Support/typora-user-images/image-20200326154551039.png">
-<meta property="og:image" content="http://yoursite.com/Users/songyu/Library/Application%20Support/typora-user-images/image-20200326155328103.png">
-<meta property="og:image" content="http://yoursite.com/Users/songyu/Library/Application%20Support/typora-user-images/image-20200326160317512.png">
-<meta property="og:image" content="http://yoursite.com/Users/songyu/Library/Application%20Support/typora-user-images/image-20200326160729865.png">
-<meta property="og:image" content="http://yoursite.com/Users/songyu/Library/Application%20Support/typora-user-images/image-20200326160748573.png">
+<meta property="og:image" content="https://pic.downk.cc/item/5e7c641d504f4bcb0494bddd.jpg">
+<meta property="og:image" content="https://pic.downk.cc/item/5e7c643e504f4bcb0494d246.jpg">
+<meta property="og:image" content="https://pic.downk.cc/item/5e7c6464504f4bcb0494e9e9.jpg">
+<meta property="og:image" content="https://pic.downk.cc/item/5e7c6482504f4bcb0494fac3.jpg">
+<meta property="og:image" content="https://pic.downk.cc/item/5e7c649a504f4bcb04950ab5.jpg">
 <meta property="og:image" content="https://pic.superbed.cn/item/5e0324ea76085c328902463d.jpg">
 <meta property="og:image" content="https://pic1.superbed.cn/item/5e00bb3776085c3289de1384.jpg">
 <meta property="og:image" content="https://pic2.superbed.cn/item/5e00ba0476085c3289dd88d6.jpg">
@@ -175,11 +175,11 @@
 <meta property="og:image" content="http://boketuchuang.oss-cn-beijing.aliyuncs.com/18-11-11/31332758.jpg">
 <meta property="og:image" content="http://boketuchuang.oss-cn-beijing.aliyuncs.com/18-11-11/42528664.jpg">
 <meta property="og:image" content="http://boketuchuang.oss-cn-beijing.aliyuncs.com/18-11-11/12979627.jpg">
-<meta property="og:updated_time" content="2020-03-26T08:10:48.365Z">
+<meta property="og:updated_time" content="2020-03-26T08:15:34.371Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="异常行为检测文献整理(顶会顶刊)">
 <meta name="twitter:description" content="Timeline  2019.12.09  更新阅读笔记   来自CVPR2019《Object-centric Auto-encoders and Dummy Anomalies for Abnormal Event Detection in Video》  2019.12.10  更新阅读笔记  来自WACV2019 《Detecting Abnormal Events in Video Us">
-<meta name="twitter:image" content="http://yoursite.com/Users/songyu/Library/Application%20Support/typora-user-images/image-20200326154551039.png">
+<meta name="twitter:image" content="https://pic.downk.cc/item/5e7c641d504f4bcb0494bddd.jpg">
 
 
 
@@ -457,7 +457,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2020-03-26 16:10:48" itemprop="dateModified" datetime="2020-03-26T16:10:48+08:00">2020-03-26</time>
+                <time title="Modified: 2020-03-26 16:15:34" itemprop="dateModified" datetime="2020-03-26T16:15:34+08:00">2020-03-26</time>
               
             
           </span>
@@ -540,16 +540,16 @@
 <p><strong>贡献</strong>：1. 提出了一个双向（过去和将来）预测的框架，输入姿态轨迹（pose trajectory），预测不同时间尺度的姿态轨迹。2.提了一个新的数据集，包括单人、多人和群体的异常。</p>
 <a id="more"></a>
 <p><strong>网络结构</strong>：</p>
-<p><img src="/Users/songyu/Library/Application Support/typora-user-images/image-20200326154551039.png" alt="image-20200326154551039"></p>
+<p><img src="https://pic.downk.cc/item/5e7c641d504f4bcb0494bddd.jpg" alt="image-20200326154551039"></p>
 <p>在特定的时间尺度上，将来自两个模型（过去和将来）的预测组合在一起，生成每个时刻的预测。 例如，要生成时间尺度为1的未来预测（在作者的设置中，时间尺度1表示3步的持续时间），模型首先将序列分成较小的子序列（长度为3），然后进行对将来的预测（对于下个3 步）。 将这些预测组合起来，可以得出在此时间范围内完整输入序列的未来预测。 为了获得过去的预测，反转输入序列并将其传递给过去的预测模型。 两种模型具有相同的体系结构，但训练方式不同。</p>
 <p>对于任何时间尺度的<strong>任何时刻</strong>，该模型都会生成多个预测，因为它会在输入信号上运行滑动窗口，对这多个预测取平均就获得这个时刻的最终预测。</p>
-<p><img src="/Users/songyu/Library/Application Support/typora-user-images/image-20200326155328103.png" alt="image-20200326155328103"></p>
+<p><img src="https://pic.downk.cc/item/5e7c643e504f4bcb0494d246.jpg" alt="image-20200326155328103"></p>
 <p>作者设置的时间尺度为3，5，13，25。</p>
-<p><strong>损失函数</strong>：损失包括两种类型，node level和layer level。有M_j个nodes的第j层的损失表示为：<img src="/Users/songyu/Library/Application Support/typora-user-images/image-20200326160317512.png" alt="image-20200326160317512"></p>
+<p><strong>损失函数</strong>：损失包括两种类型，node level和layer level。有M_j个nodes的第j层的损失表示为：<img src="https://pic.downk.cc/item/5e7c6464504f4bcb0494e9e9.jpg" alt="image-20200326160317512"></p>
 <p><strong>新数据集</strong>：</p>
-<p><img src="/Users/songyu/Library/Application Support/typora-user-images/image-20200326160729865.png" alt="image-20200326160729865"></p>
+<p><img src="https://pic.downk.cc/item/5e7c6482504f4bcb0494fac3.jpg" alt="image-20200326160729865"></p>
 <p><strong>结果</strong>：</p>
-<p><img src="/Users/songyu/Library/Application Support/typora-user-images/image-20200326160748573.png" alt="image-20200326160748573"></p>
+<p><img src="https://pic.downk.cc/item/5e7c649a504f4bcb04950ab5.jpg" alt="image-20200326160748573"></p>
 <p><strong>数据集</strong>：HR-ShanghaiTech、HR-Avenue（这些是和2019CVPRLearning Regularity in Skeleton Trajectories for Anomaly Detection in Videos保持一致的。）</p>
 <h2 id="2019"><a href="#2019" class="headerlink" title="2019"></a>2019</h2><h3 id="Anomaly-Detection-in-Video-Sequence-With-Appearance-Motion-Correspondence"><a href="#Anomaly-Detection-in-Video-Sequence-With-Appearance-Motion-Correspondence" class="headerlink" title="Anomaly Detection in Video Sequence With Appearance-Motion Correspondence"></a>Anomaly Detection in Video Sequence With Appearance-Motion Correspondence</h3><p><strong>链接</strong>：<a href="https://github.com/nguyetn89/Anomaly_detection_ICCV2019" target="_blank" rel="noopener">code</a></p>
 <p><strong>来源：</strong>ICCV2019</p>
